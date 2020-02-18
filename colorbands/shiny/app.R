@@ -1,12 +1,5 @@
 # intro -------------------------------------------------------------------
 
-# Color band generator using photon
-# Step 1. Launch photon addin
-# Step 2. Select folder containing app.R as directory
-# Step 3. Write a description
-# Step 4. List packages listed under libraries section with a comma between
-#         each, and no spaces
-# Step 5. Write NULL in the other libraries source boxes
 
 # libraries ---------------------------------------------------------------
 
