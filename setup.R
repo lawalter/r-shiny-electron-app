@@ -12,32 +12,67 @@
 
 # Step 1: Install Node (https://nodejs.org/en/)
 # Step 2: Install Electron and Electron Forge using npm (which comes with
-      # Node) using the command line:
+      #   Node) using the command line:
       #   a. install -g electron-forge
       #   b. if that didn't work, try: npm i -g @electron-forge/cli
       #   c. if there's a permission error, run:
       #      sudo npm i -g @electron-forge/cli
-# Step 3: Have an R package open that you're ready to turn into an R
-      # shiny electron app, either an original package or one that has
-      # been cloned/downloaded from the GitHub repo (e.g. RSE template)
+# Step 3: Install program 'n'. This program will let us downgrade node if 
+      #   there is an issue running it at the most up-to-date version.
+      #   a. sudo npm install -g n
+      #   b. sudo n stable (this upgrades to the latest version of n)
+# Step 3: Have an R project open that you're ready to turn into an R
+      #   shiny electron app
 # Step 4: Open the Terminal and make sure your directory is in the 
-      # package/project folder.
-      # a. type 'pwd' to check
-      # b. if you're not in the right folder, change it with 'cd'
+      #   package/project folder. Run:
+      #   a. pwd
+      #   b. if you're not in the right folder, change it with 'cd'
 
 # Advanced steps ----------------------------------------------------------
 
 # Start here if you are on a computer with Steps 1-4 completed:
 
-# Step 5: Install electron locally/create the app by running:
-      # npx create-electron-app colorbands
+# Step 5: In your project directory, install electron locally/create the 
+      #   app by running:
+      #   npx create-electron-app colorbands
 # Step 6: Change directory to your new app folder:
-      # cd colorbands
-# Step 7: Move get-r-mac.sh and add-cran-binary-pkgs.R to app folder
+      #   cd colorbands
+# Step 7: Move or add files to app folder, including:
+      #   get-r-mac.sh
+      #   add-cran-binary-pkgs.R 
+      #   start-shiny.R
+      #   shiny/app.R 
+      #   src folder and 5 files
 # Step 8: Install R locally using: 
-      # sh ./get-r-mac.sh
+      #   sh ./get-r-mac.sh
 # Step 9: Get packages used in the shiny app by running:
-      # Rscript add-cran-binary-pkgs.R
+      #   Rscript add-cran-binary-pkgs.R
+# Step 10: Add additional dependencies to the package.json
+      # "dependencies": {
+      #   "axios": "^0.19.2",
+      #   "electron-squirrel-startup": "^1.0.0",
+      #   "execa": "^4.0.0"
+      # },
+      # "devDependencies": {
+      #   "@babel/core": "^7.8.4",
+      #   "@babel/plugin-transform-async-to-generator": "^7.8.3",
+      #   "@babel/preset-env": "^7.8.4",
+      #   "@babel/preset-react": "^7.8.3",
+      #   "@electron-forge/cli": "^6.0.0-beta.49",
+      #   "@electron-forge/maker-deb": "^6.0.0-beta.49",
+      #   "@electron-forge/maker-rpm": "^6.0.0-beta.49",
+      #   "@electron-forge/maker-squirrel": "^6.0.0-beta.49",
+      #   "@electron-forge/maker-zip": "^6.0.0-beta.49",
+      #   "electron": "8.0.1",
+      #   "eslint": "^6.8.0",
+      #   "eslint-config-airbnb": "^18.0.1",
+      #   "eslint-plugin-import": "^2.20.1",
+      #   "eslint-plugin-jsx-a11y": "^6.2.3",
+      #   "eslint-plugin-react": "^7.18.3",
+      #   "eslint-plugin-react-hooks": "^2.4.0",
+      #   "fs-extra": "^8.1.0"
+      # }
+# 
 
 # Step _: Create the executable app by running:
       # electron-forge make
