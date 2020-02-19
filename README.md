@@ -13,7 +13,7 @@ A setup guide by L. Abigail Walter
 2. Install Electron and Electron Forge using npm (which comes with Node). In the terminal, type ```install -g electron-forge```. If that didn't work, try ```npm i -g @electron-forge/cli```. If there's a permission error, run ```sudo npm i -g @electron-forge/cli```.
 4. Install program 'n'. This program will let us downgrade node if there is an issue running it at the most up-to-date version. In the terminal, run ```sudo npm install -g n``` to install and then ```sudo n stable``` to upgrade to the latest version of n.
 5. Open an existing R project or create a new one.
-6. Open the Terminal and make sure your directory is in the package or project folder you're ready to turn into an app. Run ```pwd``` in the terminal to check what directory you are in. If you're not in the right folder, change it with ```cd````.
+6. Open the Terminal again and make sure your directory is in the package or project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```.
   
 ## Advanced steps
   
