@@ -35,7 +35,8 @@ A setup guide by L. Abigail Walter
 9. Install R locally: ```sh ./get-r-mac.sh```
 10. Get packages for R that are used in the shiny app by running: ```Rscript add-cran-binary-pkgs.R```
 11. Add additional dependencies to the package.json:
-```      "dependencies": {
+```      
+      "dependencies": {
         "axios": "^0.19.2",
         "electron-squirrel-startup": "^1.0.0",
         "execa": "^4.0.0"
