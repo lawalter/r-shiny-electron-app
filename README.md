@@ -61,8 +61,9 @@ A setup guide by L. Abigail Walter
         "fs-extra": "^8.1.0"
       }
 ```
-12. Test to see if your app works by running: ```electron-forge start```
-13. If it runs, package and create the .exe by running: ```electron-forge make```. Your app can be found in the /out folder.
+12. Specify the lint line in package.json ```"lint": "eslint src --color"```
+13. Test to see if your app works by running: ```electron-forge start```
+14. If it runs, package and create the .exe by running: ```electron-forge make```. Your app can be found in the /out folder.
 
 
 
