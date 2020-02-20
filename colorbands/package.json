@@ -3,7 +3,7 @@
   "productName": "colorbands",
   "version": "1.0.0",
   "description": "Colorband generator",
-  "main": "src/index.js",
+  "main": "template_src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -47,6 +47,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "electron-squirrel-startup": "^1.0.0",
+    "esm": "^3.2.25",
     "execa": "^4.0.0"
   },
   "devDependencies": {

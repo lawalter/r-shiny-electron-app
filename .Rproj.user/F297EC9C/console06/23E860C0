@@ -31,3 +31,747 @@ found [92m0[0m vulnerabilities
 [?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
 [?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
 (electron) The default value of app.allowRendererProcessReuse is deprecated, it is currently "false".  It will change to be "true" in Electron 9.  For more information please check https://github.com/electron/electron/issues/18397
+^[[A^[[A^C[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ electron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[36m⠼[39m Checking your system[2K[1G[36m⠴[39m Checking your system[2K[1G[36m⠦[39m Checking your system[2K[1G[36m⠧[39m Checking your system[2K[1G[36m⠇[39m Checking your system[2K[1G[36m⠏[39m Checking your system[2K[1G[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+App threw an error during load
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/template_src/index.mjs
+    at Object.Module._extensions..mjs (internal/modules/cjs/loader.js:1020:9)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+    at Module._load (internal/modules/cjs/loader.js:728:14)
+    at Module._load (electron/js2c/asar.js:717:26)
+    at Function.Module._load (electron/js2c/asar.js:717:26)
+    at loadApplicationPackage (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:109:16)
+    at Object.<anonymous> (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:155:9)
+    at Module._compile (internal/modules/cjs/loader.js:968:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986:10)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+^C[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ electron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[36m⠼[39m Checking your system[2K[1G[36m⠴[39m Checking your system[2K[1G[36m⠦[39m Checking your system[2K[1G[36m⠧[39m Checking your system[2K[1G[36m⠇[39m Checking your system[2K[1G[36m⠏[39m Checking your system[2K[1G[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[36m⠴[39m Preparing native dependencies[2K[1G[36m⠦[39m Preparing native dependencies[2K[1G[36m⠧[39m Preparing native dependencies[2K[1G[36m⠇[39m Preparing native dependencies[2K[1G[36m⠏[39m Preparing native dependencies[2K[1G[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[36m⠴[39m Preparing native dependencies[2K[1G[36m⠦[39m Preparing native dependencies[2K[1G[36m⠧[39m Preparing native dependencies[2K[1G[36m⠇[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+App threw an error during load
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/template_src/crash_index.mjs
+    at Object.Module._extensions..mjs (internal/modules/cjs/loader.js:1020:9)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+    at Module._load (internal/modules/cjs/loader.js:728:14)
+    at Module._load (electron/js2c/asar.js:717:26)
+    at Function.Module._load (electron/js2c/asar.js:717:26)
+    at loadApplicationPackage (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:109:16)
+    at Object.<anonymous> (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:155:9)
+    at Module._compile (internal/modules/cjs/loader.js:968:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986:10)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+^C[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ electron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[36m⠼[39m Checking your system[2K[1G[36m⠴[39m Checking your system[2K[1G[36m⠦[39m Checking your system[2K[1G[36m⠧[39m Checking your system[2K[1G[36m⠇[39m Checking your system[2K[1G[36m⠏[39m Checking your system[2K[1G[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[36m⠴[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+App threw an error during load
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/template_src/crash_index.mjs
+    at Object.Module._extensions..mjs (internal/modules/cjs/loader.js:1020:9)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+    at Module._load (internal/modules/cjs/loader.js:728:14)
+    at Module._load (electron/js2c/asar.js:717:26)
+    at Function.Module._load (electron/js2c/asar.js:717:26)
+    at loadApplicationPackage (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:109:16)
+    at Object.<anonymous> (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:155:9)
+    at Module._compile (internal/modules/cjs/loader.js:968:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986:10)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+^C[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ npm install --save esm
+[?25l⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠧ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠏ rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m ebad6b742b664716[0m[K⸨[90m░░░░░░░░░░░░░░░░░░[0m⸩ ⠴ loadIdealTree:loadAllDepsIntoIdealTree: [7msill[0m [35minstall[0m loadIdealT[0m[K⸨[7m   [27m[90m░░░░░░░░░░░░░░░[0m⸩ ⠇ loadDep:@babel/highlight: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠇ loadExtraneous: [7msill[0m [35mresolveWithNewModule[0m esm@3.2.25 checking i[0m[K⸨[7m      [27m[90m░░░░░░░░░░░░[0m⸩ ⠸ diffTrees: [7msill[0m [35minstall[0m generateActionsToTake[0m[K⸨[7m       [27m[90m░░░░░░░░░░░[0m⸩ ⠸ diffTrees: [7msill[0m [35minstall[0m generateActionsToTake[0m[K⸨[7m       [27m[90m░░░░░░░░░░░[0m⸩ ⠇ postinstall: [7msill[0m [35minstall[0m executeActions[0m[K⸨[7m            [27m[90m░░░░░░[0m⸩ ⠹ refresh-package-json:esm: [32;40mtiming[0m [35maction:finalize[0m Completed in 7[0m[K⸨[7m            [27m[90m░░░░░░[0m⸩ ⠇ postinstall: [32minfo[0m [35mlifecycle[0m esm@3.2.25~postinstall: esm@3.2.25[0m[K⸨[7m            [27m[90m░░░░░░[0m⸩ ⠼ postinstall: [32minfo[0m [35mlifecycle[0m esm@3.2.25~postinstall: esm@3.2.25[0m[K[K[?25h[37;40mnpm[0m [0m[30;43mWARN[0m[35m[0m eslint-config-airbnb@18.0.1 requires a peer of eslint-plugin-react-hooks@^1.7.0 but none is installed. You must install peer dependencies yourself.
+[0m[37;40mnpm[0m [0m[30;43mWARN[0m[35m[0m colorbands@1.0.0 No repository field.
+[0m
++ esm@3.2.25
+added 1 package from 1 contributor and audited 13051 packages in 5.324s
+found [92m0[0m vulnerabilities
+
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ npm install --save esm[2Pelectron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[36m⠼[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+App threw an error during load
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/template_src/crash_index.mjs
+    at Object.Module._extensions..mjs (internal/modules/cjs/loader.js:1020:9)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+    at Module._load (internal/modules/cjs/loader.js:728:14)
+    at Module._load (electron/js2c/asar.js:717:26)
+    at Function.Module._load (electron/js2c/asar.js:717:26)
+    at loadApplicationPackage (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:109:16)
+    at Object.<anonymous> (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:155:9)
+    at Module._compile (internal/modules/cjs/loader.js:968:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986:10)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+^C[?25h[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ electron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+App threw an error during load
+Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/template_src/crash_index.mjs
+    at Object.Module._extensions..mjs (internal/modules/cjs/loader.js:1020:9)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+    at Module._load (internal/modules/cjs/loader.js:728:14)
+    at Module._load (electron/js2c/asar.js:717:26)
+    at Function.Module._load (electron/js2c/asar.js:717:26)
+    at loadApplicationPackage (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:109:16)
+    at Object.<anonymous> (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:155:9)
+    at Module._compile (internal/modules/cjs/loader.js:968:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986:10)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+^C[?25h[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ electron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[36m⠼[39m Checking your system[2K[1G[36m⠴[39m Checking your system[2K[1G[36m⠦[39m Checking your system[2K[1G[36m⠧[39m Checking your system[2K[1G[36m⠇[39m Checking your system[2K[1G[36m⠏[39m Checking your system[2K[1G[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+App threw an error during load
+TypeError [ERR_INVALID_ARG_TYPE]: The 'module' argument must be object
+    at Jh (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/esm/esm.js:1:295601)
+    at O (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/esm/esm.js:1:811)
+    at Object.<anonymous> (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/template_src/crash_index.js:2:18)
+    at Module._compile (internal/modules/cjs/loader.js:968:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:986:10)
+    at Module.load (internal/modules/cjs/loader.js:816:32)
+    at Module._load (internal/modules/cjs/loader.js:728:14)
+    at Module._load (electron/js2c/asar.js:717:26)
+    at Function.Module._load (electron/js2c/asar.js:717:26)
+    at loadApplicationPackage (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/electron/dist/Electron.app/Contents/Resources/default_app.asar/main.js:109:16)
+^C[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ electron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+(electron) The default value of app.allowRendererProcessReuse is deprecated, it is currently "false".  It will change to be "true" in Electron 9.  For more information please check https://github.com/electron/electron/issues/18397
+Error: Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT
+[90m    at Process.ChildProcess._handle.onexit (internal/child_process.js:264:19)[39m
+[90m    at onErrorNT (internal/child_process.js:456:16)[39m
+[90m    at processTicksAndRejections (internal/process/task_queues.js:80:21)[39m {
+  errno: [32m'ENOENT'[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  path: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  spawnargs: [
+    [32m'--vanilla'[39m,
+    [32m'-f'[39m,
+    [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m
+  ],
+  originalMessage: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  shortMessage: [32m'Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R\n'[39m +
+    [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [90mundefined[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m''[39m,
+  stderr: [32m''[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+Error: Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT
+[90m    at Process.ChildProcess._handle.onexit (internal/child_process.js:264:19)[39m
+[90m    at onErrorNT (internal/child_process.js:456:16)[39m
+[90m    at processTicksAndRejections (internal/process/task_queues.js:80:21)[39m {
+  errno: [32m'ENOENT'[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  path: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  spawnargs: [
+    [32m'--vanilla'[39m,
+    [32m'-f'[39m,
+    [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m
+  ],
+  originalMessage: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  shortMessage: [32m'Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R\n'[39m +
+    [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [90mundefined[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m''[39m,
+  stderr: [32m''[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+Error: Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT
+[90m    at Process.ChildProcess._handle.onexit (internal/child_process.js:264:19)[39m
+[90m    at onErrorNT (internal/child_process.js:456:16)[39m
+[90m    at processTicksAndRejections (internal/process/task_queues.js:80:21)[39m {
+  errno: [32m'ENOENT'[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  path: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  spawnargs: [
+    [32m'--vanilla'[39m,
+    [32m'-f'[39m,
+    [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m
+  ],
+  originalMessage: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  shortMessage: [32m'Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R\n'[39m +
+    [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [90mundefined[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m''[39m,
+  stderr: [32m''[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+Error: Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT
+[90m    at Process.ChildProcess._handle.onexit (internal/child_process.js:264:19)[39m
+[90m    at onErrorNT (internal/child_process.js:456:16)[39m
+[90m    at processTicksAndRejections (internal/process/task_queues.js:80:21)[39m {
+  errno: [32m'ENOENT'[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  path: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R'[39m,
+  spawnargs: [
+    [32m'--vanilla'[39m,
+    [32m'-f'[39m,
+    [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m
+  ],
+  originalMessage: [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  shortMessage: [32m'Command failed with ENOENT: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R\n'[39m +
+    [32m'spawn /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R ENOENT'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [90mundefined[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m''[39m,
+  stderr: [32m''[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+[?25h[?25h]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ sh ./get-r-mac.sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3 75.6M    3 2434k    0     0  3256k      0  0:00:23 --:--:--  0:00:23 3255k 13 75.6M   13  9.8M    0     0  5776k      0  0:00:13  0:00:01  0:00:12 5774k 24 75.6M   24 18.2M    0     0  6817k      0  0:00:11  0:00:02  0:00:09 6815k 35 75.6M   35 26.5M    0     0  7248k      0  0:00:10  0:00:03  0:00:07 7247k 46 75.6M   46 35.0M    0     0  7549k      0  0:00:10  0:00:04  0:00:06 7549k 56 75.6M   56 42.8M    0     0  7643k      0  0:00:10  0:00:05  0:00:05 8299k 67 75.6M   67 51.1M    0     0  7769k      0  0:00:09  0:00:06  0:00:03 8464k 79 75.6M   79 59.8M    0     0  7917k      0  0:00:09  0:00:07  0:00:02 8521k 89 75.6M   89 67.7M    0     0  7926k      0  0:00:09  0:00:08  0:00:01 8435k 98 75.6M   98 74.7M    0     0  7859k      0  0:00:09  0:00:09 --:--:-- 8152k100 75.6M  100 75.6M    0     0  7839k      0  0:00:09  0:00:09 --:--:-- 8113k
+212256 blocks
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ Rscript add-cran-binary-pkgs.R
+^C
+Execution halted
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ Rscript add-cran-binary-pkgs.R
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/assertthat_0.2.1.tgz'
+Content type 'application/x-gzip' length 42774 bytes (41 KB)
+==================================================
+downloaded 41 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/BH_1.69.0-1.tgz'
+Content type 'application/x-gzip' length 11725217 bytes (11.2 MB)
+==================================================
+downloaded 11.2 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/cli_1.1.0.tgz'
+Content type 'application/x-gzip' length 108608 bytes (106 KB)
+==================================================
+downloaded 106 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/crayon_1.3.4.tgz'
+Content type 'application/x-gzip' length 709728 bytes (693 KB)
+==================================================
+downloaded 693 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/digest_0.6.18.tgz'
+Content type 'application/x-gzip' length 166752 bytes (162 KB)
+==================================================
+downloaded 162 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/dplyr_0.8.0.1.tgz'
+Content type 'application/x-gzip' length 6072413 bytes (5.8 MB)
+==================================================
+downloaded 5.8 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/ellipsis_0.1.0.tgz'
+Content type 'application/x-gzip' length 18505 bytes (18 KB)
+==================================================
+downloaded 18 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/fansi_0.4.0.tgz'
+Content type 'application/x-gzip' length 172972 bytes (168 KB)
+==================================================
+downloaded 168 KB
+
+Warning in download.packages(cran_to_install, destdir = td, type = type) :
+  no package ‘fastmap’ at the repositories
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/glue_1.3.1.tgz'
+Content type 'application/x-gzip' length 159548 bytes (155 KB)
+==================================================
+downloaded 155 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/htmltools_0.3.6.tgz'
+Content type 'application/x-gzip' length 205363 bytes (200 KB)
+==================================================
+downloaded 200 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/httpuv_1.5.0.tgz'
+Content type 'application/x-gzip' length 2385853 bytes (2.3 MB)
+==================================================
+downloaded 2.3 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/jsonlite_1.6.tgz'
+Content type 'application/x-gzip' length 1070380 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/later_0.8.0.tgz'
+Content type 'application/x-gzip' length 343440 bytes (335 KB)
+==================================================
+downloaded 335 KB
+
+Warning in download.packages(cran_to_install, destdir = td, type = type) :
+  no package ‘lifecycle’ at the repositories
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/magrittr_1.5.tgz'
+Content type 'application/x-gzip' length 152460 bytes (148 KB)
+==================================================
+downloaded 148 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/mime_0.6.tgz'
+Content type 'application/x-gzip' length 26324 bytes (25 KB)
+==================================================
+downloaded 25 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/pillar_1.3.1.tgz'
+Content type 'application/x-gzip' length 86893 bytes (84 KB)
+==================================================
+downloaded 84 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/pkgconfig_2.0.2.tgz'
+Content type 'application/x-gzip' length 15456 bytes (15 KB)
+==================================================
+downloaded 15 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/plogr_0.2.0.tgz'
+Content type 'application/x-gzip' length 12957 bytes (12 KB)
+==================================================
+downloaded 12 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/promises_1.0.1.tgz'
+Content type 'application/x-gzip' length 243528 bytes (237 KB)
+==================================================
+downloaded 237 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/purrr_0.3.2.tgz'
+Content type 'application/x-gzip' length 314250 bytes (306 KB)
+==================================================
+downloaded 306 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/R6_2.4.0.tgz'
+Content type 'application/x-gzip' length 34757 bytes (33 KB)
+==================================================
+downloaded 33 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/Rcpp_1.0.1.tgz'
+Content type 'application/x-gzip' length 4373955 bytes (4.2 MB)
+==================================================
+downloaded 4.2 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/rlang_0.3.1.tgz'
+Content type 'application/x-gzip' length 1135713 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/shiny_1.2.0.tgz'
+Content type 'application/x-gzip' length 3495431 bytes (3.3 MB)
+==================================================
+downloaded 3.3 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/sourcetools_0.1.7.tgz'
+Content type 'application/x-gzip' length 129105 bytes (126 KB)
+==================================================
+downloaded 126 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/stringi_1.4.3.tgz'
+Content type 'application/x-gzip' length 13539272 bytes (12.9 MB)
+==================================================
+downloaded 12.9 MB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/stringr_1.4.0.tgz'
+Content type 'application/x-gzip' length 184050 bytes (179 KB)
+==================================================
+downloaded 179 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/tibble_2.1.1.tgz'
+Content type 'application/x-gzip' length 220495 bytes (215 KB)
+==================================================
+downloaded 215 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/tidyr_0.8.3.tgz'
+Content type 'application/x-gzip' length 593197 bytes (579 KB)
+==================================================
+downloaded 579 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/tidyselect_0.2.5.tgz'
+Content type 'application/x-gzip' length 294992 bytes (288 KB)
+==================================================
+downloaded 288 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/utf8_1.1.4.tgz'
+Content type 'application/x-gzip' length 172781 bytes (168 KB)
+==================================================
+downloaded 168 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/vctrs_0.1.0.tgz'
+Content type 'application/x-gzip' length 485836 bytes (474 KB)
+==================================================
+downloaded 474 KB
+
+trying URL 'https://cloud.r-project.org/bin/macosx/el-capitan/contrib/3.4/xtable_1.8-3.tgz'
+Content type 'application/x-gzip' length 695706 bytes (679 KB)
+==================================================
+downloaded 679 KB
+
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ Rscript add-cran-binary-pkgs.R[13Psh ./get-r-mac.shelectron-forge start
+[?25l[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[36m⠼[39m Checking your system[2K[1G[36m⠴[39m Checking your system[2K[1G[36m⠦[39m Checking your system[2K[1G[36m⠧[39m Checking your system[2K[1G[36m⠇[39m Checking your system[2K[1G[36m⠏[39m Checking your system[2K[1G[36m⠋[39m Checking your system[2K[1G[36m⠙[39m Checking your system[2K[1G[36m⠹[39m Checking your system[2K[1G[36m⠸[39m Checking your system[2K[1G[36m⠼[39m Checking your system[2K[1G[36m⠴[39m Checking your system[2K[1G[36m⠦[39m Checking your system[2K[1G[36m⠧[39m Checking your system[2K[1G[?25h[32m✔[39m Checking your system
+[?25l[36m⠋[39m Locating Application[2K[1G[?25h[32m✔[39m Locating Application
+[?25l[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[36m⠹[39m Preparing native dependencies[2K[1G[36m⠸[39m Preparing native dependencies[2K[1G[36m⠼[39m Preparing native dependencies[2K[1G[36m⠴[39m Preparing native dependencies[2K[1G[36m⠦[39m Preparing native dependencies[2K[1G[36m⠧[39m Preparing native dependencies[2K[1G[36m⠇[39m Preparing native dependencies[2K[1G[36m⠏[39m Preparing native dependencies[2K[1G[36m⠋[39m Preparing native dependencies[2K[1G[36m⠙[39m Preparing native dependencies[2K[1G[?25h[32m✔[39m Preparing native dependencies
+[?25l[36m⠋[39m Launching Application[2K[1G[?25h[32m✔[39m Launching Application
+(electron) The default value of app.allowRendererProcessReuse is deprecated, it is currently "false".  It will change to be "true" in Electron 9.  For more information please check https://github.com/electron/electron/issues/18397
+Error: Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version
+Execution halted
+WARNING: ignoring environment value of R_HOME
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Script that starts the shiny webserver
+> # Parameters are supplied using environment variables
+> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))
+> shiny::runApp(
++   Sys.getenv("RE_SHINY_PATH"),
++   host = "127.0.0.1",
++   launch.browser = FALSE,
++   port = as.integer(Sys.getenv("RE_SHINY_PORT"))
++ )
+    at makeError (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/lib/error.js:58:11)
+    at handlePromise (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/index.js:114:26) {
+  shortMessage: [32m'Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [33m1[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m'WARNING: ignoring environment value of R_HOME\n'[39m +
+    [32m'\n'[39m +
+    [32m'R version 3.6.1 (2019-07-05) -- "Action of the Toes"\n'[39m +
+    [32m'Copyright (C) 2019 The R Foundation for Statistical Computing\n'[39m +
+    [32m'Platform: x86_64-apple-darwin15.6.0 (64-bit)\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is free software and comes with ABSOLUTELY NO WARRANTY.\n'[39m +
+    [32m'You are welcome to redistribute it under certain conditions.\n'[39m +
+    [32m"Type 'license()' or 'licence()' for distribution details.\n"[39m +
+    [32m'\n'[39m +
+    [32m'  Natural language support but running in an English locale\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is a collaborative project with many contributors.\n'[39m +
+    [32m"Type 'contributors()' for more information and\n"[39m +
+    [32m"'citation()' on how to cite R or R packages in publications.\n"[39m +
+    [32m'\n'[39m +
+    [32m"Type 'demo()' for some demos, 'help()' for on-line help, or\n"[39m +
+    [32m"'help.start()' for an HTML browser interface to help.\n"[39m +
+    [32m"Type 'q()' to quit R.\n"[39m +
+    [32m'\n'[39m +
+    [32m'> # Script that starts the shiny webserver\n'[39m +
+    [32m'> # Parameters are supplied using environment variables\n'[39m +
+    [32m'> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))\n'[39m +
+    [32m'> shiny::runApp(\n'[39m +
+    [32m'+   Sys.getenv("RE_SHINY_PATH"),\n'[39m +
+    [32m'+   host = "127.0.0.1",\n'[39m +
+    [32m'+   launch.browser = FALSE,\n'[39m +
+    [32m'+   port = as.integer(Sys.getenv("RE_SHINY_PORT"))\n'[39m +
+    [32m'+ )'[39m,
+  stderr: [32m'Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version\n'[39m +
+    [32m'Execution halted'[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+Error: Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version
+Execution halted
+WARNING: ignoring environment value of R_HOME
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Script that starts the shiny webserver
+> # Parameters are supplied using environment variables
+> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))
+> shiny::runApp(
++   Sys.getenv("RE_SHINY_PATH"),
++   host = "127.0.0.1",
++   launch.browser = FALSE,
++   port = as.integer(Sys.getenv("RE_SHINY_PORT"))
++ )
+    at makeError (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/lib/error.js:58:11)
+    at handlePromise (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/index.js:114:26) {
+  shortMessage: [32m'Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [33m1[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m'WARNING: ignoring environment value of R_HOME\n'[39m +
+    [32m'\n'[39m +
+    [32m'R version 3.6.1 (2019-07-05) -- "Action of the Toes"\n'[39m +
+    [32m'Copyright (C) 2019 The R Foundation for Statistical Computing\n'[39m +
+    [32m'Platform: x86_64-apple-darwin15.6.0 (64-bit)\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is free software and comes with ABSOLUTELY NO WARRANTY.\n'[39m +
+    [32m'You are welcome to redistribute it under certain conditions.\n'[39m +
+    [32m"Type 'license()' or 'licence()' for distribution details.\n"[39m +
+    [32m'\n'[39m +
+    [32m'  Natural language support but running in an English locale\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is a collaborative project with many contributors.\n'[39m +
+    [32m"Type 'contributors()' for more information and\n"[39m +
+    [32m"'citation()' on how to cite R or R packages in publications.\n"[39m +
+    [32m'\n'[39m +
+    [32m"Type 'demo()' for some demos, 'help()' for on-line help, or\n"[39m +
+    [32m"'help.start()' for an HTML browser interface to help.\n"[39m +
+    [32m"Type 'q()' to quit R.\n"[39m +
+    [32m'\n'[39m +
+    [32m'> # Script that starts the shiny webserver\n'[39m +
+    [32m'> # Parameters are supplied using environment variables\n'[39m +
+    [32m'> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))\n'[39m +
+    [32m'> shiny::runApp(\n'[39m +
+    [32m'+   Sys.getenv("RE_SHINY_PATH"),\n'[39m +
+    [32m'+   host = "127.0.0.1",\n'[39m +
+    [32m'+   launch.browser = FALSE,\n'[39m +
+    [32m'+   port = as.integer(Sys.getenv("RE_SHINY_PORT"))\n'[39m +
+    [32m'+ )'[39m,
+  stderr: [32m'Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version\n'[39m +
+    [32m'Execution halted'[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+Error: Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version
+Execution halted
+WARNING: ignoring environment value of R_HOME
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Script that starts the shiny webserver
+> # Parameters are supplied using environment variables
+> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))
+> shiny::runApp(
++   Sys.getenv("RE_SHINY_PATH"),
++   host = "127.0.0.1",
++   launch.browser = FALSE,
++   port = as.integer(Sys.getenv("RE_SHINY_PORT"))
++ )
+    at makeError (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/lib/error.js:58:11)
+    at handlePromise (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/index.js:114:26) {
+  shortMessage: [32m'Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [33m1[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m'WARNING: ignoring environment value of R_HOME\n'[39m +
+    [32m'\n'[39m +
+    [32m'R version 3.6.1 (2019-07-05) -- "Action of the Toes"\n'[39m +
+    [32m'Copyright (C) 2019 The R Foundation for Statistical Computing\n'[39m +
+    [32m'Platform: x86_64-apple-darwin15.6.0 (64-bit)\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is free software and comes with ABSOLUTELY NO WARRANTY.\n'[39m +
+    [32m'You are welcome to redistribute it under certain conditions.\n'[39m +
+    [32m"Type 'license()' or 'licence()' for distribution details.\n"[39m +
+    [32m'\n'[39m +
+    [32m'  Natural language support but running in an English locale\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is a collaborative project with many contributors.\n'[39m +
+    [32m"Type 'contributors()' for more information and\n"[39m +
+    [32m"'citation()' on how to cite R or R packages in publications.\n"[39m +
+    [32m'\n'[39m +
+    [32m"Type 'demo()' for some demos, 'help()' for on-line help, or\n"[39m +
+    [32m"'help.start()' for an HTML browser interface to help.\n"[39m +
+    [32m"Type 'q()' to quit R.\n"[39m +
+    [32m'\n'[39m +
+    [32m'> # Script that starts the shiny webserver\n'[39m +
+    [32m'> # Parameters are supplied using environment variables\n'[39m +
+    [32m'> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))\n'[39m +
+    [32m'> shiny::runApp(\n'[39m +
+    [32m'+   Sys.getenv("RE_SHINY_PATH"),\n'[39m +
+    [32m'+   host = "127.0.0.1",\n'[39m +
+    [32m'+   launch.browser = FALSE,\n'[39m +
+    [32m'+   port = as.integer(Sys.getenv("RE_SHINY_PORT"))\n'[39m +
+    [32m'+ )'[39m,
+  stderr: [32m'Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version\n'[39m +
+    [32m'Execution halted'[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+Error: Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R
+Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version
+Execution halted
+WARNING: ignoring environment value of R_HOME
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Script that starts the shiny webserver
+> # Parameters are supplied using environment variables
+> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))
+> shiny::runApp(
++   Sys.getenv("RE_SHINY_PATH"),
++   host = "127.0.0.1",
++   launch.browser = FALSE,
++   port = as.integer(Sys.getenv("RE_SHINY_PORT"))
++ )
+    at makeError (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/lib/error.js:58:11)
+    at handlePromise (/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/node_modules/[4mexeca[24m/index.js:114:26) {
+  shortMessage: [32m'Command failed with exit code 1: /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  command: [32m'/Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/r-mac/bin/R --vanilla -f /Users/bsevans/Desktop/abby_git/r-shiny-electron-app/colorbands/start-shiny.R'[39m,
+  exitCode: [33m1[39m,
+  signal: [90mundefined[39m,
+  signalDescription: [90mundefined[39m,
+  stdout: [32m'WARNING: ignoring environment value of R_HOME\n'[39m +
+    [32m'\n'[39m +
+    [32m'R version 3.6.1 (2019-07-05) -- "Action of the Toes"\n'[39m +
+    [32m'Copyright (C) 2019 The R Foundation for Statistical Computing\n'[39m +
+    [32m'Platform: x86_64-apple-darwin15.6.0 (64-bit)\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is free software and comes with ABSOLUTELY NO WARRANTY.\n'[39m +
+    [32m'You are welcome to redistribute it under certain conditions.\n'[39m +
+    [32m"Type 'license()' or 'licence()' for distribution details.\n"[39m +
+    [32m'\n'[39m +
+    [32m'  Natural language support but running in an English locale\n'[39m +
+    [32m'\n'[39m +
+    [32m'R is a collaborative project with many contributors.\n'[39m +
+    [32m"Type 'contributors()' for more information and\n"[39m +
+    [32m"'citation()' on how to cite R or R packages in publications.\n"[39m +
+    [32m'\n'[39m +
+    [32m"Type 'demo()' for some demos, 'help()' for on-line help, or\n"[39m +
+    [32m"'help.start()' for an HTML browser interface to help.\n"[39m +
+    [32m"Type 'q()' to quit R.\n"[39m +
+    [32m'\n'[39m +
+    [32m'> # Script that starts the shiny webserver\n'[39m +
+    [32m'> # Parameters are supplied using environment variables\n'[39m +
+    [32m'> assign(".lib.loc", Sys.getenv("R_LIB_PATHS"), envir = environment(.libPaths))\n'[39m +
+    [32m'> shiny::runApp(\n'[39m +
+    [32m'+   Sys.getenv("RE_SHINY_PATH"),\n'[39m +
+    [32m'+   host = "127.0.0.1",\n'[39m +
+    [32m'+   launch.browser = FALSE,\n'[39m +
+    [32m'+   port = as.integer(Sys.getenv("RE_SHINY_PORT"))\n'[39m +
+    [32m'+ )'[39m,
+  stderr: [32m'Error: package ‘digest’ was installed by an R version with different internals; it needs to be reinstalled for use with this R version\n'[39m +
+    [32m'Execution halted'[39m,
+  failed: [33mtrue[39m,
+  timedOut: [33mfalse[39m,
+  isCanceled: [33mfalse[39m,
+  killed: [33mfalse[39m
+}
+Rscript add-cran-binary-pkgs.R
+Warning message:
+package ‘automagic’ was built under R version 3.4.4 
+Warning in download.packages(cran_to_install, destdir = td, type = type) :
+  no package ‘fastmap’ at the repositories
+Warning in download.packages(cran_to_install, destdir = td, type = type) :
+  no package ‘lifecycle’ at the repositories
+Error in readBin(tarfile, "raw", n = 3L) : 
+  can only read from a binary connection
+Calls: install_bins -> apply -> FUN -> decompress -> readBin
+In addition: Warning message:
+In file(con, "rb") :
+  file("") only supports open = "w+" and open = "w+b": using the former
+Execution halted
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ node -v
+v10.16.3
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ npm -v
+6.9.0
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ p[Kgit pull
+remote: Enumerating objects: 85, done.[K
+remote: Counting objects:   1% (1/85)[Kremote: Counting objects:   2% (2/85)[Kremote: Counting objects:   3% (3/85)[Kremote: Counting objects:   4% (4/85)[Kremote: Counting objects:   5% (5/85)[Kremote: Counting objects:   7% (6/85)[Kremote: Counting objects:   8% (7/85)[Kremote: Counting objects:   9% (8/85)[Kremote: Counting objects:  10% (9/85)[Kremote: Counting objects:  11% (10/85)[Kremote: Counting objects:  12% (11/85)[Kremote: Counting objects:  14% (12/85)[Kremote: Counting objects:  15% (13/85)[Kremote: Counting objects:  16% (14/85)[Kremote: Counting objects:  17% (15/85)[Kremote: Counting objects:  18% (16/85)[Kremote: Counting objects:  20% (17/85)[Kremote: Counting objects:  21% (18/85)[Kremote: Counting objects:  22% (19/85)[Kremote: Counting objects:  23% (20/85)[Kremote: Counting objects:  24% (21/85)[Kremote: Counting objects:  25% (22/85)[Kremote: Counting objects:  27% (23/85)[Kremote: Counting objects:  28% (24/85)[Kremote: Counting objects:  29% (25/85)[Kremote: Counting objects:  30% (26/85)[Kremote: Counting objects:  31% (27/85)[Kremote: Counting objects:  32% (28/85)[Kremote: Counting objects:  34% (29/85)[Kremote: Counting objects:  35% (30/85)[Kremote: Counting objects:  36% (31/85)[Kremote: Counting objects:  37% (32/85)[Kremote: Counting objects:  38% (33/85)[Kremote: Counting objects:  40% (34/85)[Kremote: Counting objects:  41% (35/85)[Kremote: Counting objects:  42% (36/85)[Kremote: Counting objects:  43% (37/85)[Kremote: Counting objects:  44% (38/85)[Kremote: Counting objects:  45% (39/85)[Kremote: Counting objects:  47% (40/85)[Kremote: Counting objects:  48% (41/85)[Kremote: Counting objects:  49% (42/85)[Kremote: Counting objects:  50% (43/85)[Kremote: Counting objects:  51% (44/85)[Kremote: Counting objects:  52% (45/85)[Kremote: Counting objects:  54% (46/85)[Kremote: Counting objects:  55% (47/85)[Kremote: Counting objects:  56% (48/85)[Kremote: Counting objects:  57% (49/85)[Kremote: Counting objects:  58% (50/85)[Kremote: Counting objects:  60% (51/85)[Kremote: Counting objects:  61% (52/85)[Kremote: Counting objects:  62% (53/85)[Kremote: Counting objects:  63% (54/85)[Kremote: Counting objects:  64% (55/85)[Kremote: Counting objects:  65% (56/85)[Kremote: Counting objects:  67% (57/85)[Kremote: Counting objects:  68% (58/85)[Kremote: Counting objects:  69% (59/85)[Kremote: Counting objects:  70% (60/85)[Kremote: Counting objects:  71% (61/85)[Kremote: Counting objects:  72% (62/85)[Kremote: Counting objects:  74% (63/85)[Kremote: Counting objects:  75% (64/85)[Kremote: Counting objects:  76% (65/85)[Kremote: Counting objects:  77% (66/85)[Kremote: Counting objects:  78% (67/85)[Kremote: Counting objects:  80% (68/85)[Kremote: Counting objects:  81% (69/85)[Kremote: Counting objects:  82% (70/85)[Kremote: Counting objects:  83% (71/85)[Kremote: Counting objects:  84% (72/85)[Kremote: Counting objects:  85% (73/85)[Kremote: Counting objects:  87% (74/85)[Kremote: Counting objects:  88% (75/85)[Kremote: Counting objects:  89% (76/85)[Kremote: Counting objects:  90% (77/85)[Kremote: Counting objects:  91% (78/85)[Kremote: Counting objects:  92% (79/85)[Kremote: Counting objects:  94% (80/85)[Kremote: Counting objects:  95% (81/85)[Kremote: Counting objects:  96% (82/85)[Kremote: Counting objects:  97% (83/85)[Kremote: Counting objects:  98% (84/85)[Kremote: Counting objects: 100% (85/85)[Kremote: Counting objects: 100% (85/85), done.[K
+remote: Compressing objects:   1% (1/84)[Kremote: Compressing objects:   2% (2/84)[Kremote: Compressing objects:   3% (3/84)[Kremote: Compressing objects:   4% (4/84)[Kremote: Compressing objects:   5% (5/84)[Kremote: Compressing objects:   7% (6/84)[Kremote: Compressing objects:   8% (7/84)[Kremote: Compressing objects:   9% (8/84)[Kremote: Compressing objects:  10% (9/84)[Kremote: Compressing objects:  11% (10/84)[Kremote: Compressing objects:  13% (11/84)[Kremote: Compressing objects:  14% (12/84)[Kremote: Compressing objects:  15% (13/84)[Kremote: Compressing objects:  16% (14/84)[Kremote: Compressing objects:  17% (15/84)[Kremote: Compressing objects:  19% (16/84)[Kremote: Compressing objects:  20% (17/84)[Kremote: Compressing objects:  21% (18/84)[Kremote: Compressing objects:  22% (19/84)[Kremote: Compressing objects:  23% (20/84)[Kremote: Compressing objects:  25% (21/84)[Kremote: Compressing objects:  26% (22/84)[Kremote: Compressing objects:  27% (23/84)[Kremote: Compressing objects:  28% (24/84)[Kremote: Compressing objects:  29% (25/84)[Kremote: Compressing objects:  30% (26/84)[Kremote: Compressing objects:  32% (27/84)[Kremote: Compressing objects:  33% (28/84)[Kremote: Compressing objects:  34% (29/84)[Kremote: Compressing objects:  35% (30/84)[Kremote: Compressing objects:  36% (31/84)[Kremote: Compressing objects:  38% (32/84)[Kremote: Compressing objects:  39% (33/84)[Kremote: Compressing objects:  40% (34/84)[Kremote: Compressing objects:  41% (35/84)[Kremote: Compressing objects:  42% (36/84)[Kremote: Compressing objects:  44% (37/84)[Kremote: Compressing objects:  45% (38/84)[Kremote: Compressing objects:  46% (39/84)[Kremote: Compressing objects:  47% (40/84)[Kremote: Compressing objects:  48% (41/84)[Kremote: Compressing objects:  50% (42/84)[Kremote: Compressing objects:  51% (43/84)[Kremote: Compressing objects:  52% (44/84)[Kremote: Compressing objects:  53% (45/84)[Kremote: Compressing objects:  54% (46/84)[Kremote: Compressing objects:  55% (47/84)[Kremote: Compressing objects:  57% (48/84)[Kremote: Compressing objects:  58% (49/84)[Kremote: Compressing objects:  59% (50/84)[Kremote: Compressing objects:  60% (51/84)[Kremote: Compressing objects:  61% (52/84)[Kremote: Compressing objects:  63% (53/84)[Kremote: Compressing objects:  64% (54/84)[Kremote: Compressing objects:  65% (55/84)[Kremote: Compressing objects:  66% (56/84)[Kremote: Compressing objects:  67% (57/84)[Kremote: Compressing objects:  69% (58/84)[Kremote: Compressing objects:  70% (59/84)[Kremote: Compressing objects:  71% (60/84)[Kremote: Compressing objects:  72% (61/84)[Kremote: Compressing objects:  73% (62/84)[Kremote: Compressing objects:  75% (63/84)[Kremote: Compressing objects:  76% (64/84)[Kremote: Compressing objects:  77% (65/84)[Kremote: Compressing objects:  78% (66/84)[Kremote: Compressing objects:  79% (67/84)[Kremote: Compressing objects:  80% (68/84)[Kremote: Compressing objects:  82% (69/84)[Kremote: Compressing objects:  83% (70/84)[Kremote: Compressing objects:  84% (71/84)[Kremote: Compressing objects:  85% (72/84)[Kremote: Compressing objects:  86% (73/84)[Kremote: Compressing objects:  88% (74/84)[Kremote: Compressing objects:  89% (75/84)[Kremote: Compressing objects:  90% (76/84)[Kremote: Compressing objects:  91% (77/84)[Kremote: Compressing objects:  92% (78/84)[Kremote: Compressing objects:  94% (79/84)[Kremote: Compressing objects:  95% (80/84)[Kremote: Compressing objects:  96% (81/84)[Kremote: Compressing objects:  97% (82/84)[Kremote: Compressing objects:  98% (83/84)[Kremote: Compressing objects: 100% (84/84)[Kremote: Compressing objects: 100% (84/84), done.[K
+remote: Total 84 (delta 55), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:   1% (1/84)   Unpacking objects:   2% (2/84)   Unpacking objects:   3% (3/84)   Unpacking objects:   4% (4/84)   Unpacking objects:   5% (5/84)   Unpacking objects:   7% (6/84)   Unpacking objects:   8% (7/84)   Unpacking objects:   9% (8/84)   Unpacking objects:  10% (9/84)   Unpacking objects:  11% (10/84)   Unpacking objects:  13% (11/84)   Unpacking objects:  14% (12/84)   Unpacking objects:  15% (13/84)   Unpacking objects:  16% (14/84)   Unpacking objects:  17% (15/84)   Unpacking objects:  19% (16/84)   Unpacking objects:  20% (17/84)   Unpacking objects:  21% (18/84)   Unpacking objects:  22% (19/84)   Unpacking objects:  23% (20/84)   Unpacking objects:  25% (21/84)   Unpacking objects:  26% (22/84)   Unpacking objects:  27% (23/84)   Unpacking objects:  28% (24/84)   Unpacking objects:  29% (25/84)   Unpacking objects:  30% (26/84)   Unpacking objects:  32% (27/84)   Unpacking objects:  33% (28/84)   Unpacking objects:  34% (29/84)   Unpacking objects:  35% (30/84)   Unpacking objects:  36% (31/84)   Unpacking objects:  38% (32/84)   Unpacking objects:  39% (33/84)   Unpacking objects:  40% (34/84)   Unpacking objects:  41% (35/84)   Unpacking objects:  42% (36/84)   Unpacking objects:  44% (37/84)   Unpacking objects:  45% (38/84)   Unpacking objects:  46% (39/84)   Unpacking objects:  47% (40/84)   Unpacking objects:  48% (41/84)   Unpacking objects:  50% (42/84)   Unpacking objects:  51% (43/84)   Unpacking objects:  52% (44/84)   Unpacking objects:  53% (45/84)   Unpacking objects:  54% (46/84)   Unpacking objects:  55% (47/84)   Unpacking objects:  57% (48/84)   Unpacking objects:  58% (49/84)   Unpacking objects:  59% (50/84)   Unpacking objects:  60% (51/84)   Unpacking objects:  61% (52/84)   Unpacking objects:  63% (53/84)   Unpacking objects:  64% (54/84)   Unpacking objects:  65% (55/84)   Unpacking objects:  66% (56/84)   Unpacking objects:  67% (57/84)   Unpacking objects:  69% (58/84)   Unpacking objects:  70% (59/84)   Unpacking objects:  71% (60/84)   Unpacking objects:  72% (61/84)   Unpacking objects:  73% (62/84)   Unpacking objects:  75% (63/84)   Unpacking objects:  76% (64/84)   Unpacking objects:  77% (65/84)   Unpacking objects:  78% (66/84)   Unpacking objects:  79% (67/84)   Unpacking objects:  80% (68/84)   Unpacking objects:  82% (69/84)   Unpacking objects:  83% (70/84)   Unpacking objects:  84% (71/84)   Unpacking objects:  85% (72/84)   Unpacking objects:  86% (73/84)   Unpacking objects:  88% (74/84)   Unpacking objects:  89% (75/84)   Unpacking objects:  90% (76/84)   Unpacking objects:  91% (77/84)   Unpacking objects:  92% (78/84)   Unpacking objects:  94% (79/84)   Unpacking objects:  95% (80/84)   Unpacking objects:  96% (81/84)   Unpacking objects:  97% (82/84)   Unpacking objects:  98% (83/84)   Unpacking objects: 100% (84/84)   Unpacking objects: 100% (84/84), done.
+From https://github.com/lawalter/r-shiny-electron-app
+   c77ad6d..9e62570  master     -> origin/master
+Updating c77ad6d..9e62570
+Fast-forward
+ README.md | 79 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 1 file changed, 79 insertions(+)
+ create mode 100644 README.md
+]0;~/Desktop/abby_git/r-shiny-electron-app/colorbandsBrians-MacBook-Air:colorbands bsevans$ 

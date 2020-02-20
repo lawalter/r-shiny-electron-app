@@ -3,6 +3,8 @@
 # Script to find dependencies of a pkg list, download binaries and put them
 # In the standalone R library.
 
+library(automagic)
+
 options(repos = "https://cloud.r-project.org")
 
 cran_pkgs <- setdiff(unique(c(
