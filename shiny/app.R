@@ -16,7 +16,7 @@ library(stringr)
 ui <- fluidPage(
 
   # Application title:
-  titlePanel("Practice Color Band Generator"),
+  titlePanel("Color Band Combination Generator"),
 
   # Sidebar with input options:
   sidebarLayout(
