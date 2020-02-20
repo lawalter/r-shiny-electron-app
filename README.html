@@ -131,10 +131,17 @@ $(document).ready(function () {
 <h3>Steps to get your computer ready:</h3>
 <ol style="list-style-type: decimal">
 <li>Install Node: <a href="https://nodejs.org/en/" class="uri">https://nodejs.org/en/</a></li>
-<li>Install Electron and Electron Forge using npm (npm is automatically installed with Node). In the terminal, type <code>install -g electron-forge</code>. If that didn’t work, try <code>npm i -g @electron-forge/cli</code>. If there’s a permission error, run <code>sudo npm i -g @electron-forge/cli</code>.</li>
-<li>Check your versions of node <code>node -v</code> and npm <code>npm -v</code>. For this guide, I will be using node v13.9.0 and npm v6.9.0. If your installations are ahead and you experience problems with these steps, try downgrading (see <a href="#troubleshooting">Troubleshooting</a> section below).</li>
+<li>Install Electron and Electron Forge using npm (npm is installed with Node)</li>
+</ol>
+<ul>
+<li>In the terminal, type <code>install -g electron-forge</code></li>
+<li>If that didn’t work, try <code>npm i -g @electron-forge/cli</code></li>
+<li>If there’s a permission error, run <code>sudo npm i -g @electron-forge/cli</code></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Check your versions of node <code>node -v</code> and npm <code>npm -v</code>. For this guide, I will be using node v13.9.0 and npm v6.13.7. If your installations are ahead and you experience problems with these steps, try downgrading (see <a href="#troubleshooting">Troubleshooting</a> section below).</li>
 <li>Open an existing R project or create a new one.</li>
-<li>Make sure your directory is in the package or project folder you’re ready to turn into an app. Run <code>pwd</code> on the command line to check what directory you are in. If you’re not in the right folder, change your directory using <code>cd</code>.</li>
+<li>Make sure your directory is in the package or project folder you’re ready to turn into an app. Run <code>pwd</code> on the command line to check what directory you are in. If you’re not in the right folder, change your directory using <code>cd</code></li>
 </ol>
 </div>
 </div>
@@ -170,13 +177,13 @@ $(document).ready(function () {
 <li>Install R locally:</li>
 </ol>
 <ul>
-<li>First, check the version of R on your machine. In the R console, run <code>version</code>.</li>
+<li>First, check the version of R on your machine. In the R console, run <code>version</code></li>
 <li>Use the version given to edit get-r-mac.sh, replacing version numbers in the link <code>https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg</code> with the version you are running.</li>
 <li><b>Important:</b> The R version used to make the shiny app and the version installed locally must match.</li>
-<li>Once you save the file, run the shell script in the terminal: <code>sh ./get-r-mac.sh</code></li>
+<li>Once you save the file, run the shell script in the terminal <code>sh ./get-r-mac.sh</code></li>
 </ul>
 <ol start="10" style="list-style-type: decimal">
-<li>Get packages for R that are used in the shiny app by running: <code>Rscript add-cran-binary-pkgs.R</code></li>
+<li>Get packages for R that are used in the shiny app by running <code>Rscript add-cran-binary-pkgs.R</code></li>
 <li><p>Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket <code>}</code> of the .json file.</p>
 <pre><code>  &quot;dependencies&quot;: {
     &quot;axios&quot;: &quot;^0.19.2&quot;,
@@ -206,15 +213,15 @@ $(document).ready(function () {
 <p><b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on <a href="https://www.npmjs.com/" class="uri">https://www.npmjs.com/</a></p></li>
 <li>Specify the <code>&quot;lint&quot;: &quot;echo \&quot;No linting configured\&quot;&quot;</code> line in package.json with <code>&quot;lint&quot;: &quot;eslint src --color&quot;</code></li>
 <li>Run <code>npm install</code> to add new dependencies you listed in package.json to the node_modules folder</li>
-<li>Test to see if your app works by running: <code>electron-forge start</code></li>
-<li><p>If it runs, package and create the .exe on the command line with: <code>electron-forge make</code>. Your app can be found in the /out folder.</p></li>
+<li>Test to see if your app works by running <code>electron-forge start</code></li>
+<li><p>If it runs, package and create the .exe on the command line with <code>electron-forge make</code>. Your app can be found in the /out folder.</p></li>
 </ol>
 </div>
 </div>
 <div id="troubleshooting" class="section level2">
 <h2>Troubleshooting</h2>
 <ul>
-<li>To change your version of node (i.e. downgrade), install program ‘n’. This program will let us downgrade node if there is an issue running it at the most up-to-date version. In the terminal, run <code>sudo npm install -g n</code> to install and then <code>sudo n stable</code> to upgrade to the latest version of n. For example, to change to node v10.16.3 run: <code>sudo n 10.16.3</code></li>
+<li>To change your version of node (i.e. downgrade), install program ‘n’. This program will let us downgrade node if there is an issue running it at the most up-to-date version. In the terminal, run <code>sudo npm install -g n</code> to install and then <code>sudo n stable</code> to upgrade to the latest version of n. For example, to change to node v10.16.3 run: <code>sudo n 13.9.0</code></li>
 </ul>
 </div>
 </div>

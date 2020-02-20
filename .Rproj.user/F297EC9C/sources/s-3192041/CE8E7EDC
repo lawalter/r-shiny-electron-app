@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1927134493",
+    "hash" : "0",
     "id" : "CE8E7EDC",
-    "lastKnownWriteTime" : 1582213664,
-    "last_content_update" : 1582213664316,
+    "lastKnownWriteTime" : 1582213968,
+    "last_content_update" : 1582213968164,
     "path" : "~/Desktop/abby_git/r-shiny-electron-app/README.md",
     "project_path" : "README.md",
     "properties" : {
-        "cursorPosition" : "18,127",
-        "scrollLine" : "15"
+        "cursorPosition" : "46,84",
+        "scrollLine" : "27"
     },
     "relative_order" : 1,
     "source_on_save" : false,

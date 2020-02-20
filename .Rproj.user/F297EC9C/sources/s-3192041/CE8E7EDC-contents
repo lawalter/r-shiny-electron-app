@@ -15,10 +15,13 @@ A setup guide by L. Abigail Walter
 ### Steps to get your computer ready:
 
 1. Install Node: https://nodejs.org/en/
-2. Install Electron and Electron Forge using npm (npm is automatically installed with Node). In the terminal, type ```install -g electron-forge```. If that didn't work, try ```npm i -g @electron-forge/cli```. If there's a permission error, run ```sudo npm i -g @electron-forge/cli```.
+2. Install Electron and Electron Forge using npm (npm is installed with Node)
+- In the terminal, type ```install -g electron-forge``` 
+- If that didn't work, try ```npm i -g @electron-forge/cli```
+- If there's a permission error, run ```sudo npm i -g @electron-forge/cli```
 3. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using node v13.9.0 and npm v6.13.7. If your installations are ahead and you experience problems with these steps, try downgrading (see [Troubleshooting] section below).
 4. Open an existing R project or create a new one.
-5. Make sure your directory is in the package or project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```.
+5. Make sure your directory is in the package or project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
   
 ## Advanced steps
   
@@ -41,11 +44,11 @@ A setup guide by L. Abigail Walter
     - src/main.js
 8. Change your directory to your new app folder ```cd appNameHere```
 9. Install R locally:
-- First, check the version of R on your machine. In the R console, run ```version```. 
+- First, check the version of R on your machine. In the R console, run ```version``` 
 - Use the version given to edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running. 
 - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
-- Once you save the file, run the shell script in the terminal: ```sh ./get-r-mac.sh``` 
-10. Get packages for R that are used in the shiny app by running: ```Rscript add-cran-binary-pkgs.R```
+- Once you save the file, run the shell script in the terminal ```sh ./get-r-mac.sh``` 
+10. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
 11. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
       "dependencies": {
@@ -78,8 +81,8 @@ A setup guide by L. Abigail Walter
 
 12. Specify the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
 13. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-14. Test to see if your app works by running: ```electron-forge start```
-15. If it runs, package and create the .exe on the command line with: ```electron-forge make```. Your app can be found in the /out folder.
+14. Test to see if your app works by running ```electron-forge start```
+15. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
 ## Troubleshooting
 
