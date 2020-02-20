@@ -3,7 +3,8 @@
 *In progress*
 
 A setup guide by L. Abigail Walter
-<br>Instructions adapted from Travis Hinkelman: https://www.travishinkelman.com/post/deploy-shiny-electron/
+<br>Instructions adapted from <a href="https://github.com/hinkelman/r-shiny-electron">Travis Hinkelman</a>: https://www.travishinkelman.com/post/deploy-shiny-electron/
+<br>R Shiny Electron template created by <a href="https://github.com/dirkschumacher/r-shiny-electron">Dirk Shumacher</a>
 
 ## Getting started
 
