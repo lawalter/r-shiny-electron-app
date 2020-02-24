@@ -16,10 +16,10 @@ A setup guide by L. Abigail Walter
 
 1. Install Node.js: https://nodejs.org/en/
 2. Install Electron and Electron Forge using npm (npm is installed with Node.js)
-- In the terminal, type ```install -g electron-forge``` 
+    - In the terminal, type ```install -g electron-forge``` 
     - If that didn't work, try ```npm i -g @electron-forge/cli```
     - If there's a permission error, run ```sudo npm i -g @electron-forge/cli```
-3. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using node v13.9.0 and npm v6.13.7. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
+3. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
 4. Open an existing R project or create a new one.
 5. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
   
@@ -44,10 +44,10 @@ A setup guide by L. Abigail Walter
     - src/main.js
 8. Change your directory to your new app folder ```cd appNameHere```
 9. Install R locally:
-- First, check the version of R on your machine. In the R console, run ```version``` 
-- Edit get-r-mac.sh or get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running. 
-- <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
-- Once you save the file, run the shell script in the terminal for ```sh ./get-r-mac.sh``` 
+    - First, check the version of R on your machine. In the R console, run ```version``` 
+    - Edit get-r-mac.sh or get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running. 
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
+    - Once you save the file, run the shell script in the terminal for ```sh ./get-r-mac.sh``` 
 10. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
 11. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
@@ -93,12 +93,13 @@ A setup guide by L. Abigail Walter
 1. Install Node.js: https://nodejs.org/en/
     - Check the box option during the node.js install to also install chocolatey
 2. Install <a href="https://chocolatey.org/install">chocolatey</a>, if not already installed via Node.js
-    - Using chocolatey, install innoextract
+    - Using chocolatey, install innoextract by running ```choco install innoextract```
+        - <b>Note:</b> You will need to run this command as an administrator
 3. Install <a href="https://cygwin.com/">Cygwin</a>
     - During Cygwin install, <a href="https://superuser.com/questions/693284/wget-command-not-working-in-cygwin">select wget packages</a> at the 'packages' screen by clicking the arrow in the 'new' clolumn to select the newest version.
 4. Install Electron and Electron Forge using npm (npm is installed with Node.js)
     - In the terminal, type ```npm install -g electron-forge```
-5. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using node v13.9.0 and npm v6.13.7. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
+5. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
 6. Open an existing R project or create a new one.
 7. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
   
@@ -123,10 +124,10 @@ A setup guide by L. Abigail Walter
     - src/main.js
 9. Change your directory to your new app folder ```cd appNameHere```
 10. Install R locally:
-- First, check the version of R on your machine. In the R console, run ```version``` 
-- Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running. 
-- <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
-- Once you save the file, run the shell script in the terminal for ```sh ./get-r-win.sh```
+    - First, check the version of R on your machine. In the R console, run ```version``` 
+    - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running. 
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
+    - Once you save the file, run the shell script in the terminal for ```sh ./get-r-win.sh```
 11. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
 12. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
