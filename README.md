@@ -1,4 +1,4 @@
-# Making an R Shiny Electron App using macOS via npx
+# How to Make an R Shiny Electron App 
 
 *In progress*
 
@@ -16,10 +16,11 @@ A setup guide by L. Abigail Walter
 
 1. Install Node: https://nodejs.org/en/
 2. Install Electron and Electron Forge using npm (npm is installed with Node)
-- In the terminal, type ```install -g electron-forge``` 
-- If that didn't work, try ```npm i -g @electron-forge/cli```
-- If there's a permission error, run ```sudo npm i -g @electron-forge/cli```
-3. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using node v13.9.0 and npm v6.13.7. If your installations are ahead and you experience problems with these steps, try downgrading (see [Troubleshooting](#troubleshooting) section below).
+- <b>Windows:</b> In the terminal, type ```npm install -g electron-forge```
+- <b>Mac:</b> In the terminal, type ```install -g electron-forge``` 
+    - If that didn't work, try ```npm i -g @electron-forge/cli```
+    - If there's a permission error, run ```sudo npm i -g @electron-forge/cli```
+3. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using node v13.9.0 and npm v6.13.7. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
 4. Open an existing R project or create a new one.
 5. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
   
@@ -27,10 +28,10 @@ A setup guide by L. Abigail Walter
   
 ### Start here if you already have node, npm, and electron installed:
 
-6. In your project directory, install electron locally by running: ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app.
+6. In your project directory, install electron locally by running: ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
 7. Move or add files to your new app folder, including:
+- <b>Mac:</b> get-r-mac.sh or <b>Windows:</b> get-r-win.sh
 - add-cran-binary-pkgs.R
-- get-r-mac.sh
 - start-shiny.R
 - Make new folder 'shiny' for: 
     - shiny/app.R 
@@ -45,9 +46,10 @@ A setup guide by L. Abigail Walter
 8. Change your directory to your new app folder ```cd appNameHere```
 9. Install R locally:
 - First, check the version of R on your machine. In the R console, run ```version``` 
-- Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running. 
+- Edit get-r-mac.sh or get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running. 
 - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
-- Once you save the file, run the shell script in the terminal ```sh ./get-r-mac.sh``` 
+- Once you save the file, run the shell script in the terminal for <b>Mac:</b> ```sh ./get-r-mac.sh``` or <b>Windows:</b> ```sh ./get-r-win.sh```
+    - You may get an error: ```./get-r-win.sh: line 4: wget: command not found``` and/or ``` ./get-r-win.sh: line 7: innoextract: command not found```. If this happens, install <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">wget</a> and/or <a href="https://constexpr.org/innoextract/#download">innoextract</a>  
 10. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
 11. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
