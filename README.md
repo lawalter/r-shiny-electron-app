@@ -10,6 +10,12 @@ A setup guide by L. Abigail Walter
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
+## Navigation
+
+- [Getting started: macOS](#getting-started:-macos)
+- [Getting started: Windows](#getting-started:-windows)
+- [Troubleshooting](#troubleshooting)
+
 ## Getting started: macOS
 
 ### Steps to get your computer ready:
@@ -92,23 +98,27 @@ A setup guide by L. Abigail Walter
 
 1. Install Node.js: https://nodejs.org/en/
     - Check the box option during the node.js install to also install chocolatey
-2. Install <a href="https://chocolatey.org/install">chocolatey</a>, if not already installed via Node.js
-    - Using chocolatey, install innoextract by running ```choco install innoextract```
-        - <b>Note:</b> You will need to run this command as an administrator
-3. Install <a href="https://cygwin.com/">Cygwin</a>
+2. Skip this step if chocolatey is installed. If chocolatey has <b>not</b> been installed:
+    - Open Windows PowerShell with right-click option "Run as Administrator" 
+    - Follow the installation steps on the <a href="https://chocolatey.org/install">chocolatey</a> website
+3. Using chocolatey, install innoextract:
+    - Open Windows PowerShell with right-click option "Run as Administrator" 
+        - <b>Note:</b> If you just installed chocolatey in Windows PowerShell, you need to close and re-open the admin shell
+    - Run ```choco install innoextract``` 
+4. Install <a href="https://cygwin.com/">Cygwin</a>
     - During Cygwin install, <a href="https://superuser.com/questions/693284/wget-command-not-working-in-cygwin">select wget packages</a> at the 'packages' screen by clicking the arrow in the 'new' clolumn to select the newest version.
-4. Install Electron and Electron Forge using npm (npm is installed with Node.js)
+5. Install Electron and Electron Forge using npm (npm is installed with Node.js)
     - In the terminal, type ```npm install -g electron-forge```
-5. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
-6. Open an existing R project or create a new one.
-7. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
+6. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
+7. Open an existing R project or create a new one.
+8. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
   
 ## Advanced steps
   
-### Start here if you already have node, npm, and electron installed:
+### Start here if you have all of the dependencies installed:
 
-7. In your project directory, install electron locally by running: ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
-8. Move or add files to your new app folder, including:
+9. In your project directory, install electron locally by running: ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
+10. Move or add files to your new app folder, including:
 - get-r-win.sh
 - add-cran-binary-pkgs.R
 - start-shiny.R
@@ -122,14 +132,14 @@ A setup guide by L. Abigail Walter
     - src/loading.css
     - src/loading.html
     - src/main.js
-9. Change your directory to your new app folder ```cd appNameHere```
-10. Install R locally:
+11. Change your directory to your new app folder ```cd appNameHere```
+12. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
     - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running. 
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
     - Once you save the file, run the shell script in the terminal for ```sh ./get-r-win.sh```
-11. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
-12. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
+13. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
+14. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
       "dependencies": {
         "axios": "^0.19.2",
@@ -159,12 +169,12 @@ A setup guide by L. Abigail Walter
 ```
 <b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on https://www.npmjs.com/
 
-13. Specify the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-14. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-15. Test to see if your app works by running ```electron-forge start```
-16. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+15. Specify the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+16. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
+17. Test to see if your app works by running ```electron-forge start```
+18. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting 
 
 - To change your version of node (i.e. downgrade), install program 'n'. This program will let us downgrade node if there is an issue running it at the most up-to-date version. In the terminal, run ```sudo npm install -g n``` to install and then ```sudo n stable``` to upgrade to the latest version of n. For example, to change to node v10.16.3 run: ```sudo n 13.9.0```
 
