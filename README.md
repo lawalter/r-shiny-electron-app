@@ -10,13 +10,15 @@ A setup guide by L. Abigail Walter
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
-## Navigation
+### Navigation
 
-- [Getting started: macOS](#getting-started:-macos)
-- [Getting started: Windows](#getting-started:-windows)
+- [Setup guide: macOS](#getting-started-on-macos)
+- [Setup guide: Windows](#getting-started-on-windows)
 - [Troubleshooting](#troubleshooting)
 
-## Getting started: macOS
+---
+
+## Getting started on macOS
 
 ### Steps to get your computer ready:
 
@@ -92,7 +94,7 @@ A setup guide by L. Abigail Walter
 
 ---
 
-## Getting started: Windows
+## Getting started on Windows
 
 ### Steps to get your computer ready:
 
