@@ -54,10 +54,11 @@ All of the following steps can be run exclusively in the RStudio terminal
 8. Change your directory to your new app folder ```cd appNameHere```
 9. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-mac.sh or get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running. 
-        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
+    - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R. 
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.4.2.
     - Once you save the file, run the shell script in the terminal for ```sh ./get-r-mac.sh``` 
 10. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
+    - If you get an error ```Error in library(automagic) : there is no package called 'automagic'```, switch to the R console and run ```install.packages("automagic")``` before re-trying step 10.
 11. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
       "dependencies": {
@@ -88,7 +89,7 @@ All of the following steps can be run exclusively in the RStudio terminal
 ```
 <b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on https://www.npmjs.com/
 
-12. Specify the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+12. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
 13. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
 14. Test to see if your app works by running ```electron-forge start```
 15. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
@@ -137,21 +138,22 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
     - src/loading.css
     - src/loading.html
     - src/main.js
-11. Change your directory to your new app folder ```cd appNameHere```
+11. In Windows PowerShell, change your directory to your new app folder ```cd appNameHere```
 12. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running. 
-        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
+    - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.4.2-win.exe``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R.
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.4.2.
     - Open the Cygwin terminal. Change your directory by typing ```cd``` with a following space, then drag the app folder to the terminal window to paste the file path. Your path will look something like ```cd /cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
     - In Cygwin, run ```sh ./get-r-win.sh```
-        - If you got an error running this script, you wil likely need to convert the get-r-win.sh file to UNIX format
-        - Download Notepad++ if you don't already have it
-        - Open get-r-win.sh in Notepad++
-        - Go to Edit -> EOL Conversion -> Unix (LF)
-        - Save the script
-        - In Cygwin, re-run ```sh ./get-r-win.sh``` 
-13. Switch to the RStudio terminal. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
-14. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
+        - <b>If you got an error:</b> you will likely need to convert get-r-win.sh to Unix 
+            - Download <a href="https://notepad-plus-plus.org/">Notepad++</a> if you don't already have it
+            - Open get-r-win.sh in Notepad++
+            - Go to Edit -> EOL Conversion -> Unix (LF)
+            - Save the script
+            - In Cygwin, re-run ```sh ./get-r-win.sh``` 
+13. In the R console, ```install.packages("automagic")``` if this package is not already installed.
+14. Switch to the RStudio terminala and make sure your directory is in the appNameHere folder. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
+15. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
       "dependencies": {
         "axios": "^0.19.2",
@@ -181,13 +183,14 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 ```
 <b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on https://www.npmjs.com/
 
-15. Specify the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-16. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-17. Test to see if your app works by running ```electron-forge start```
-18. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+16. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+17. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
+18. Test to see if your app works by running ```electron-forge start```
+19. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
 ## Troubleshooting 
 
 - To change your version of node (i.e. downgrade), install program 'n'. This program will let us downgrade node if there is an issue running it at the most up-to-date version. In the terminal, run ```sudo npm install -g n``` to install and then ```sudo n stable``` to upgrade to the latest version of n. For example, to change to node v10.16.3 run: ```sudo n 13.9.0```
 
 [Back to top](#how-to-make-an-r-shiny-electron-app)
+
