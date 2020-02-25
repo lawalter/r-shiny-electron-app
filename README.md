@@ -141,7 +141,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 11. In Windows PowerShell, change your directory to your new app folder ```cd appNameHere```
 12. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.4.2-win.exe``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R.
+    - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R.
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.4.2.
     - Open the Cygwin terminal. Change your directory by typing ```cd``` with a following space, then drag the app folder to the terminal window to paste the file path. Your path will look something like ```cd /cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
     - In Cygwin, run ```sh ./get-r-win.sh```
@@ -152,7 +152,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
             - Save the script
             - In Cygwin, re-run ```sh ./get-r-win.sh``` 
 13. In the R console, ```install.packages("automagic")``` if this package is not already installed.
-14. Switch to the RStudio terminala and make sure your directory is in the appNameHere folder. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
+14. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
 15. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
       "dependencies": {
@@ -185,7 +185,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 
 16. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
 17. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-18. Test to see if your app works by running ```electron-forge start```
+18. Test to see if your app works by running ```electron-forge start``` in the Cygwin or RStudio terminal
 19. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
 ## Troubleshooting 
