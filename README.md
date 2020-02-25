@@ -19,6 +19,7 @@ A setup guide by L. Abigail Walter
 ---
 
 ## Getting started on macOS
+All of the following steps can be run exclusively in the RStudio terminal
 
 ### Steps to get your computer ready:
 
@@ -35,7 +36,7 @@ A setup guide by L. Abigail Walter
   
 ### Start here if you already have node, npm, and electron installed:
 
-6. In your project directory, install electron locally by running: ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
+6. In your project directory, install electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
 7. Move or add files to your new app folder, including:
 - get-r-mac.sh 
 - add-cran-binary-pkgs.R
@@ -95,6 +96,7 @@ A setup guide by L. Abigail Walter
 ---
 
 ## Getting started on Windows
+Unlike the macOS setup, Windows will require the use of multiple terminals, which are specified at each step
 
 ### Steps to get your computer ready:
 
@@ -110,7 +112,7 @@ A setup guide by L. Abigail Walter
 4. Install <a href="https://cygwin.com/">Cygwin</a>
     - During Cygwin install, <a href="https://superuser.com/questions/693284/wget-command-not-working-in-cygwin">select wget packages</a> at the 'packages' screen by clicking the arrow in the 'new' clolumn to select the newest version.
 5. Install Electron and Electron Forge using npm (npm is installed with Node.js)
-    - In the terminal, type ```npm install -g electron-forge```
+    - In Windows PowerShell, run ```npm install -g electron-forge``` or ```npm install --save-dev electron```
 6. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
 7. Open an existing R project or create a new one.
 8. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
@@ -119,7 +121,7 @@ A setup guide by L. Abigail Walter
   
 ### Start here if you have all of the dependencies installed:
 
-9. In your project directory, install electron locally by running: ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
+9. In your project directory, install electron locally by running ```npx create-electron-app appNameHere``` in Windows PowerShell. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
 10. Move or add files to your new app folder, including:
 - get-r-win.sh
 - add-cran-binary-pkgs.R
@@ -139,8 +141,9 @@ A setup guide by L. Abigail Walter
     - First, check the version of R on your machine. In the R console, run ```version``` 
     - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running. 
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
-    - Once you save the file, run the shell script in the terminal for ```sh ./get-r-win.sh```
-13. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
+    - Open the Cygwin terminal. Change your directory by typing ```cd``` and dragging the app folder to the terminal window to paste the file path. Your path will look something like ```/cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
+    - In Cygwin, run ```sh ./get-r-win.sh```
+13. Switch to the RStudio terminal. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
 14. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
       "dependencies": {
@@ -180,5 +183,4 @@ A setup guide by L. Abigail Walter
 
 - To change your version of node (i.e. downgrade), install program 'n'. This program will let us downgrade node if there is an issue running it at the most up-to-date version. In the terminal, run ```sudo npm install -g n``` to install and then ```sudo n stable``` to upgrade to the latest version of n. For example, to change to node v10.16.3 run: ```sudo n 13.9.0```
 
-
- 
+[Back to top](#how-to-make-an-r-shiny-electron-app)
