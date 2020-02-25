@@ -105,10 +105,11 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 2. Skip this step if chocolatey is installed. If chocolatey has <b>not</b> been installed:
     - Open Windows PowerShell with right-click option "Run as Administrator" 
     - Follow the installation steps on the <a href="https://chocolatey.org/install">chocolatey</a> website
-3. Using chocolatey, install innoextract:
+3. Using chocolatey, install innoextract v1.8 or greater:
     - Open Windows PowerShell with right-click option "Run as Administrator" 
         - <b>Note:</b> If you just installed chocolatey in Windows PowerShell, you need to close and re-open the admin shell
     - Run ```choco install innoextract``` 
+        - If innoextract is already installed at a version less than v1.8, run ```choco upgrade innoextract```
 4. Install <a href="https://cygwin.com/">Cygwin</a>
     - During Cygwin install, <a href="https://superuser.com/questions/693284/wget-command-not-working-in-cygwin">select wget packages</a> at the 'packages' screen by clicking the arrow in the 'new' clolumn to select the newest version.
 5. Install Electron and Electron Forge using npm (npm is installed with Node.js)
@@ -141,8 +142,14 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
     - First, check the version of R on your machine. In the R console, run ```version``` 
     - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running. 
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match.
-    - Open the Cygwin terminal. Change your directory by typing ```cd``` and dragging the app folder to the terminal window to paste the file path. Your path will look something like ```/cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
+    - Open the Cygwin terminal. Change your directory by typing ```cd``` with a following space, then drag the app folder to the terminal window to paste the file path. Your path will look something like ```cd /cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
     - In Cygwin, run ```sh ./get-r-win.sh```
+        - If you got an error running this script, you wil likely need to convert the get-r-win.sh file to UNIX format
+        - Download Notepad++ if you don't already have it
+        - Open get-r-win.sh in Notepad++
+        - Go to Edit -> EOL Conversion -> Unix (LF)
+        - Save the script
+        - In Cygwin, re-run ```sh ./get-r-win.sh``` 
 13. Switch to the RStudio terminal. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
 14. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
