@@ -52,47 +52,58 @@ All of the following steps can be run exclusively in the RStudio terminal
     - src/loading.html
     - src/main.js
 8. Change your directory to your new app folder ```cd appNameHere```
+9. Install Electron locally ```npm install --save-dev electron```
 9. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
     - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R. 
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.4.2.
-    - Once you save the file, run the shell script in the terminal for ```sh ./get-r-mac.sh``` 
-10. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
-    - If you get an error ```Error in library(automagic) : there is no package called 'automagic'```, switch to the R console and run ```install.packages("automagic")``` before re-trying step 10.
-11. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
+    - Once you save the file, run the shell script in the terminal ```sh ./get-r-mac.sh``` 
+10. Switch to the R console. If you don't have the automagic package installed, run ```install.packages("automagic")```
+11. In the R terminal, run ```Rscript add-cran-binary-pkgs.R``` to get packages for R that are used in the shiny app. 
+12. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
-      "dependencies": {
-        "axios": "^0.19.2",
-        "electron-squirrel-startup": "^1.0.0",
-        "execa": "^4.0.0"
-      },
-      "devDependencies": {
-        "@babel/core": "^7.8.4",
-        "@babel/plugin-transform-async-to-generator": "^7.8.3",
-        "@babel/preset-env": "^7.8.4",
-        "@babel/preset-react": "^7.8.3",
-        "@electron-forge/cli": "^6.0.0-beta.49",
-        "@electron-forge/maker-deb": "^6.0.0-beta.49",
-        "@electron-forge/maker-rpm": "^6.0.0-beta.49",
-        "@electron-forge/maker-squirrel": "^6.0.0-beta.49",
-        "@electron-forge/maker-zip": "^6.0.0-beta.49",
-        "electron": "8.0.1",
-        "eslint": "^6.8.0",
-        "eslint-config-airbnb": "^18.0.1",
-        "eslint-plugin-import": "^2.20.1",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-react": "^7.18.3",
-        "eslint-plugin-react-hooks": "^2.4.0",
-        "esm": "^3.2.25",
-        "fs-extra": "^8.1.0"
+    "dependencies": {
+      "axios": "^0.19.2",
+      "electron-squirrel-startup": "^1.0.0",
+      "execa": "^4.0.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.8.4",
+      "@babel/plugin-transform-async-to-generator": "^7.8.3",
+      "@babel/preset-env": "^7.8.4",
+      "@babel/preset-react": "^7.8.3",
+      "@electron-forge/cli": "^6.0.0-beta.50",
+      "@electron-forge/maker-deb": "^6.0.0-beta.50",
+      "@electron-forge/maker-rpm": "^6.0.0-beta.50",
+      "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
+      "@electron-forge/maker-zip": "^6.0.0-beta.50",
+      "electron": "8.0.2",
+      "eslint": "^6.8.0",
+      "eslint-config-airbnb": "^18.0.1",
+      "eslint-plugin-import": "^2.20.1",
+      "eslint-plugin-jsx-a11y": "^6.2.3",
+      "eslint-plugin-react": "^7.18.3",
+      "eslint-plugin-react-hooks": "^1.7.0",
+      "esm": "^3.2.25",
+      "fs-extra": "^8.1.0"
       }
 ```
-<b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on https://www.npmjs.com/
+<b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers. You can accomplish this by manually searching the module names on https://www.npmjs.com/
 
-12. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-13. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-14. Test to see if your app works by running ```electron-forge start```
-15. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+<b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws the warning ```npm WARN eslint-config-airbnb@18.0.1 requires a peer of eslint-plugin-react-hooks@^1.7.0 but none is installed. You must install peer dependencies yourself.```
+
+13. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+14. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
+15. Test to see if your app works by running ```electron-forge start```
+16. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+
+<b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running ```npm install```. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
+```
+ "repository": {
+  "type": "git",
+  "url": "git://github.com/username/repo.git"
+  },
+```
 
 ---
 
@@ -187,6 +198,16 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 17. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
 18. Test to see if your app works by running ```electron-forge start``` in the Cygwin or RStudio terminal
 19. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+
+<b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running ```npm install```. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
+```
+ "repository": {
+  "type": "git",
+  "url": "git://github.com/username/repo.git"
+  },
+```
+
+---
 
 ## Troubleshooting 
 
