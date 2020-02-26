@@ -1,7 +1,5 @@
 # How to Make an R Shiny Electron App 
 
-*In progress*
-
 A setup guide by L. Abigail Walter
 <br>Instructions adapted from <a href="https://www.travishinkelman.com/post/deploy-shiny-electron/">Travis Hinkelman</a> 
 <br>R Shiny Electron template created by <a href="https://github.com/dirkschumacher/r-shiny-electron">Dirk Shumacher</a>
@@ -10,11 +8,13 @@ A setup guide by L. Abigail Walter
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
+<b>Recommendation:</b> Building the app on a Mac is _much_ simpler than Windows. 
+
 ### Navigation
 
 - [Setup guide: macOS](#getting-started-on-macos)
-- [Setup guide: Windows](#getting-started-on-windows)
-- [Troubleshooting](#troubleshooting)
+- [Setup guide: Windows](#getting-started-on-windows) - complete!
+- [Troubleshooting](#troubleshooting) - in progress
 
 ---
 
@@ -36,14 +36,16 @@ All of the following steps can be run exclusively in the RStudio terminal
   
 ### Start here if you already have node, npm, and electron installed:
 
-6. In your project directory, install electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
-7. Move or add files to your new app folder, including:
+6. In your project directory, install electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. 
+    - <b>Note:</b> Your app cannot be titled 'app'.
+7. In your appNameHere folder, delete folder 'src'. 
+8. Move or add files to your new app folder, including:
 - get-r-mac.sh 
 - add-cran-binary-pkgs.R
 - start-shiny.R
 - Make new folder 'shiny' for: 
     - shiny/app.R 
-- Delete auto-created contents of folder 'src', and replace with:
+- Make new folder 'src' for:
     - src/failed.html
     - src/helpers.js
     - src/index.css
@@ -51,20 +53,21 @@ All of the following steps can be run exclusively in the RStudio terminal
     - src/loading.css
     - src/loading.html
     - src/main.js
-8. Change your directory to your new app folder ```cd appNameHere```
-9. Install Electron locally ```npm install --save-dev electron```
-9. Install R locally:
+- <b>Note:</b> File app.R is whatever R Shiny script you want to launch in your application. You can use the example provided in this repo or use your own.
+9. Change your directory to your new app folder ```cd appNameHere```
+10. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R. 
+    - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running if you made your own app.R, or the version of R that was used to make the app.R. 
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.4.2.
     - Once you save the file, run the shell script in the terminal ```sh ./get-r-mac.sh``` 
-10. Switch to the R console. If you don't have the automagic package installed, run ```install.packages("automagic")```
-11. In the R terminal, run ```Rscript add-cran-binary-pkgs.R``` to get packages for R that are used in the shiny app. 
-12. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
+11. If you don't have the automagic package installed, run ```install.packages("automagic")``` R console. 
+12. In the R terminal, run ```Rscript add-cran-binary-pkgs.R``` to get packages for R. 
+13. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
     "dependencies": {
       "axios": "^0.19.2",
       "electron-squirrel-startup": "^1.0.0",
+      "esm": "^3.2.25",
       "execa": "^4.0.0"
     },
     "devDependencies": {
@@ -84,18 +87,17 @@ All of the following steps can be run exclusively in the RStudio terminal
       "eslint-plugin-jsx-a11y": "^6.2.3",
       "eslint-plugin-react": "^7.18.3",
       "eslint-plugin-react-hooks": "^1.7.0",
-      "esm": "^3.2.25",
       "fs-extra": "^8.1.0"
       }
 ```
 <b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers. You can accomplish this by manually searching the module names on https://www.npmjs.com/
 
-<b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws the warning ```npm WARN eslint-config-airbnb@18.0.1 requires a peer of eslint-plugin-react-hooks@^1.7.0 but none is installed. You must install peer dependencies yourself.```
+<b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws a warning.
 
-13. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-14. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-15. Test to see if your app works by running ```electron-forge start```
-16. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+14. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+15. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
+16. Test to see if your app works by running ```electron-forge start```
+17. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
 <b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running ```npm install```. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
 ```
@@ -163,7 +165,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
             - Save the script
             - In Cygwin, re-run ```sh ./get-r-win.sh``` 
 13. In the R console, ```install.packages("automagic")``` if this package is not already installed.
-14. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R that are used in the shiny app by running ```Rscript add-cran-binary-pkgs.R```
+14. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R by running ```Rscript add-cran-binary-pkgs.R```
 15. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
       "dependencies": {
