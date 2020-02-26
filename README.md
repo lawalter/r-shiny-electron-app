@@ -8,7 +8,7 @@ A setup guide by L. Abigail Walter
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
-<b>Recommendation:</b> Building the app on a Mac is _much_ simpler than Windows. 
+<b>Note:</b> Building the app on a Mac is _much_ simpler than Windows. 
 
 ### Navigation
 
