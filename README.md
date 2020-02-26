@@ -57,8 +57,8 @@ All of the following steps can be run exclusively in the RStudio terminal
 9. Change your directory to your new app folder ```cd appNameHere```
 10. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.4.2.pkg``` with the version you are running if you made your own app.R, or the version of R that was used to make the app.R. 
-        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.4.2.
+    - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.6.2.pkg``` with the version you are running. 
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
     - Once you save the file, run the shell script in the terminal ```sh ./get-r-mac.sh``` 
 11. If you don't have the automagic package installed, run ```install.packages("automagic")``` R console. 
 12. In the R terminal, run ```Rscript add-cran-binary-pkgs.R``` to get packages for R. 
