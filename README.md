@@ -12,9 +12,9 @@ A setup guide by L. Abigail Walter
 
 ### Navigation
 
-- [Setup guide: macOS](#getting-started-on-macos)
-- [Setup guide: Windows](#getting-started-on-windows) - complete!
-- [Troubleshooting](#troubleshooting) - in progress
+- [Setup guide: macOS](#getting-started-on-macos) - complete!
+- [Setup guide: Windows](#getting-started-on-windows) - in progress
+- [Troubleshooting](#troubleshooting)
 
 ---
 
