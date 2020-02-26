@@ -1,5 +1,11 @@
 # intro -------------------------------------------------------------------
 
+# An example R Shiny script 
+
+# Purpose:   To generate random bird band color combinations
+# Author:    L. Abigail Walter
+# Github:    @lawalter
+# Last edit: Feb 2020
 
 # libraries ---------------------------------------------------------------
 
@@ -24,34 +30,25 @@ ui <- fluidPage(
 
       checkboxGroupInput("colorVector",
                          "Colors available:",
-                         choices = list("Aluminum" = "X",
-                                        "Red" = "R", "Orange" = "O",
-                                        "Yellow" = "Y", "Green" = "G",
-                                        "Blue" = "B", "Purple" = "M",
-                                        "Pink" = "P", "White" = "W",
-                                        "Black" = "K", "Grey" = "E"),
+                         choices = list("[X] Aluminum" = "X",
+                                        "[R] Red" = "R", 
+                                        "[O] Orange" = "O",
+                                        "[Y] Yellow" = "Y", 
+                                        "[G] Green" = "G",
+                                        "[B] Blue" = "B", 
+                                        "[M] Purple" = "M",
+                                        "[P] Pink" = "P", 
+                                        "[W] White" = "W",
+                                        "[K] Black" = "K", 
+                                        "[E] Grey" = "E"),
                          selected = c("X", "R", "O", "Y", "G", "B", "W")),
-
-      numericInput("nBands",
-                   "Number of bands:",
-                   min = 1,
-                   max = 6,
-                   step = 1,
-                   value = 4),
-
-      numericInput("nBands",
-                   "Number of right bands:",
-                   min = 1,
-                   max = 3,
-                   step = 1,
-                   value = 2),
-
-      numericInput("nBands",
-                   "Number of left bands:",
-                   min = 1,
-                   max = 3,
-                   step = 1,
-                   value = 2)
+      
+      # numericInput("nBands",
+      #              "Number of bands:",
+      #              min = 1,
+      #              max = 6,
+      #              step = 1,
+      #              value = 4)
     ),
 
     # Show a plot of the generated distribution:
@@ -72,14 +69,9 @@ get_colors <-
     nBands = 4,                 # The number of bands
     nPositions = nBands,        # The number of possible band positions
     xPositions = 1:nPositions,  # The position of the X band, from LT to RB
-    nLeft = nPositions/2,   # The maximum number of bands on the left leg
-    nRight = nPositions/2   # The maximum number of bands on the right leg
+    nLeft = nPositions/2,       # The maximum number of bands on the left leg
+    nRight = nPositions/2       # The maximum number of bands on the right leg
   ) {
-    # Add blank if the number of bands < the number of positions:
-    if(nBands < nPositions){
-      colorVector <-
-        c(colorVector, '')
-    }
     map_dfc(
       1:(nPositions/2),
       function(x) {
@@ -88,14 +80,6 @@ get_colors <-
       expand(!!! rlang::syms(names(.))) %>%
       # Unite upper and lower bands:
       unite('color', sep = '') %>%
-      # Add blanks:
-      mutate(
-        color =
-          str_pad(
-            color,
-            width = nPositions/2,
-            side = 'right',
-            pad = '_')) %>%
       # All potential combos of left and right legs:
       expand(
         left = color,
@@ -114,9 +98,7 @@ get_colors <-
         filter(
           .,
           # Combos with one, and only one, aluminum:
-          str_count(.$color, 'X') == 1,
-          # Aluminum at chosen position:
-          str_locate(.$color, 'X')[,1] %in% xPositions)
+          str_count(.$color, 'X') == 1)
       } else .} %>%
       # Randomize output:
       sample_n(size = nrow(.))
@@ -127,10 +109,7 @@ get_colors <-
 server <- function(input, output) {
 
   dataInput <- reactive({
-    get_colors(input$colorVector,
-               nBands = input$nBands,
-               nLeft = input$nLeft,
-               nRight = input$nRight)
+    get_colors(input$colorVector)
   })
 
   output$view <- renderTable({
