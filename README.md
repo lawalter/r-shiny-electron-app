@@ -24,28 +24,29 @@ All of the following steps can be run exclusively in the RStudio terminal
 ### Steps to get your computer ready:
 
 1. Install Node.js: https://nodejs.org/en/
-2. Install Electron and Electron Forge using npm (npm is installed with Node.js)
-    - In the terminal, type ```install -g electron-forge``` 
-    - If that didn't work, try ```npm i -g @electron-forge/cli```
+2. Install Electron Forge using npm (npm is installed with Node.js)
+    - In the R terminal, run ```npm i -g @electron-forge/cli``` 
     - If there's a permission error, run ```sudo npm i -g @electron-forge/cli```
 3. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
-4. Open an existing R project or create a new one.
-5. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
+4. Open an existing R project, create a new one, or initialize a project by cloning a git repo.
   
 ## Advanced steps
   
 ### Start here if you already have node, npm, and electron installed:
 
-6. In your project directory, install electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. 
+5. Make sure your directory is in R project folder you're ready to turn into an app. 
+    - Run ```pwd``` on the command line to check what directory you are in. 
+    - If you're not in the right folder, change your directory using ```cd example/file/path``` with the example path replaced with the appropriate path to your project. 
+6. In your project directory, install Electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. 
     - <b>Note:</b> Your app cannot be titled 'app'.
 7. In your appNameHere folder, delete folder 'src'. 
-8. Move or add files to your new app folder, including:
+8. Move or add files (I typically use the R file pane gui) to your new app folder, including:
 - get-r-mac.sh 
 - add-cran-binary-pkgs.R
 - start-shiny.R
-- Make new folder 'shiny' for: 
+- Make new folder <b>shiny</b> for: 
     - shiny/app.R 
-- Make new folder 'src' for:
+- Make new folder <b>src</b> for:
     - src/failed.html
     - src/helpers.js
     - src/index.css
@@ -120,30 +121,32 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
     - Open Windows PowerShell with right-click option "Run as Administrator" 
     - Follow the installation steps on the <a href="https://chocolatey.org/install">chocolatey</a> website
 3. Using chocolatey, install innoextract v1.8 or greater:
-    - Open Windows PowerShell with right-click option "Run as Administrator" 
-        - <b>Note:</b> If you just installed chocolatey in Windows PowerShell, you need to close and re-open the admin shell
+    - Re-open Windows PowerShell with right-click option "Run as Administrator" 
+        - <b>Note:</b> If you just installed chocolatey in Windows PowerShell, you need to close and re-launch the admin shell
     - Run ```choco install innoextract``` 
         - If innoextract is already installed at a version less than v1.8, run ```choco upgrade innoextract```
-4. Install <a href="https://cygwin.com/">Cygwin</a>
+4. In the same Administrator Windows PowerShell, install Electron Forge globally
+    - Run ```npm install -g electron-forge```
+5. Install <a href="https://cygwin.com/">Cygwin</a>
     - During Cygwin install, <a href="https://superuser.com/questions/693284/wget-command-not-working-in-cygwin">select wget packages</a> at the 'packages' screen by clicking the arrow in the 'new' clolumn to select the newest version.
-5. Install Electron and Electron Forge using npm (npm is installed with Node.js)
-    - In Windows PowerShell, run ```npm install -g electron-forge``` or ```npm install --save-dev electron```
-6. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
-7. Open an existing R project or create a new one.
-8. Make sure your directory is in R project folder you're ready to turn into an app. Run ```pwd``` on the command line to check what directory you are in. If you're not in the right folder, change your directory using ```cd```
+6. Check your versions of node ```node -v``` and npm ```npm -v``` using any terminal. For this guide, I will be running <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
+7. Open an existing R project, create a new one, or initialize a project by cloning a git repo.
   
 ## Advanced steps
   
 ### Start here if you have all of the dependencies installed:
 
-9. In your project directory, install electron locally by running ```npx create-electron-app appNameHere``` in Windows PowerShell. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
-10. Move or add files to your new app folder, including:
+8. Make sure your directory is in R project folder you're ready to turn into an app. 
+    - In Windows PowerShell, run ```pwd``` on the command line to check what directory you are in. 
+    - If you're not in the right folder, change your directory using ```cd C:\Users\Name\Desktop\gitFolderName``` with the example path replaced with the appropriate path to your project. 
+9. In your project directory, install Electron locally using Windows PowerShell by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
+10. Move or add files (I typically use the R file pane gui) to your new app folder, including:
 - get-r-win.sh
 - add-cran-binary-pkgs.R
 - start-shiny.R
-- Make new folder 'shiny' for: 
+- Make new folder <b>shiny</b> for: 
     - shiny/app.R 
-- Delete auto-created contents of folder 'src', and replace with:
+- Delete auto-created contents of folder <b>src</b>, and replace with:
     - src/failed.html
     - src/helpers.js
     - src/index.css
@@ -155,8 +158,9 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 12. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
     - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R.
-        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.4.2.
-    - Open the Cygwin terminal. Change your directory by typing ```cd``` with a following space, then drag the app folder to the terminal window to paste the file path. Your path will look something like ```cd /cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
+    - Open the Cygwin terminal. Change your directory by 1) typing ```cd```, 2) opening File Explorer and navigating to your app folder, then 3 ) dragging the app folder itself to the Cygwin terminal window to paste the file path. Run the command.
+        - <b>Example:</b> ```cd /cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
     - In Cygwin, run ```sh ./get-r-win.sh```
         - <b>If you got an error:</b> you will likely need to convert get-r-win.sh to Unix 
             - Download <a href="https://notepad-plus-plus.org/">Notepad++</a> if you don't already have it
@@ -168,30 +172,30 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 14. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R by running ```Rscript add-cran-binary-pkgs.R```
 15. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
-      "dependencies": {
-        "axios": "^0.19.2",
-        "electron-squirrel-startup": "^1.0.0",
-        "execa": "^4.0.0"
-      },
-      "devDependencies": {
-        "@babel/core": "^7.8.4",
-        "@babel/plugin-transform-async-to-generator": "^7.8.3",
-        "@babel/preset-env": "^7.8.4",
-        "@babel/preset-react": "^7.8.3",
-        "@electron-forge/cli": "^6.0.0-beta.49",
-        "@electron-forge/maker-deb": "^6.0.0-beta.49",
-        "@electron-forge/maker-rpm": "^6.0.0-beta.49",
-        "@electron-forge/maker-squirrel": "^6.0.0-beta.49",
-        "@electron-forge/maker-zip": "^6.0.0-beta.49",
-        "electron": "8.0.1",
-        "eslint": "^6.8.0",
-        "eslint-config-airbnb": "^18.0.1",
-        "eslint-plugin-import": "^2.20.1",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-react": "^7.18.3",
-        "eslint-plugin-react-hooks": "^2.4.0",
-        "esm": "^3.2.25",
-        "fs-extra": "^8.1.0"
+    "dependencies": {
+      "axios": "^0.19.2",
+      "electron-squirrel-startup": "^1.0.0",
+      "esm": "^3.2.25",
+      "execa": "^4.0.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.8.4",
+      "@babel/plugin-transform-async-to-generator": "^7.8.3",
+      "@babel/preset-env": "^7.8.4",
+      "@babel/preset-react": "^7.8.3",
+      "@electron-forge/cli": "^6.0.0-beta.50",
+      "@electron-forge/maker-deb": "^6.0.0-beta.50",
+      "@electron-forge/maker-rpm": "^6.0.0-beta.50",
+      "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
+      "@electron-forge/maker-zip": "^6.0.0-beta.50",
+      "electron": "8.0.2",
+      "eslint": "^6.8.0",
+      "eslint-config-airbnb": "^18.0.1",
+      "eslint-plugin-import": "^2.20.1",
+      "eslint-plugin-jsx-a11y": "^6.2.3",
+      "eslint-plugin-react": "^7.18.3",
+      "eslint-plugin-react-hooks": "^1.7.0",
+      "fs-extra": "^8.1.0"
       }
 ```
 <b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on https://www.npmjs.com/
