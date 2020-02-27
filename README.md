@@ -4,6 +4,8 @@ A setup guide by L. Abigail Walter
 <br>Instructions adapted from <a href="https://www.travishinkelman.com/post/deploy-shiny-electron/">Travis Hinkelman</a> 
 <br>R Shiny Electron template created by <a href="https://github.com/dirkschumacher/r-shiny-electron">Dirk Shumacher</a>
 
+### Introduction
+
 <b>Motivation:</b> In February 2020, I was unable to create an app using an R Shiny Electron template via Dirk Shumaker's <a href="https://github.com/dirkschumacher/r-shiny-electron">original repo</a> or Travis Hinkelman's <a href="https://github.com/hinkelman/r-shiny-electron">fork</a>. I bypassed this issue of ```npm``` reporting dozens of warnings ond vulnerabilities by installing elecron locally with ```npx```.
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
@@ -32,7 +34,7 @@ All of the following steps can be run exclusively in the RStudio terminal
   
 ## Advanced steps
   
-### Start here if you already have node, npm, and electron installed:
+### Start here if you have all of the dependencies installed:
 
 5. Make sure your directory is in R project folder you're ready to turn into an app. 
     - Run ```pwd``` on the command line to check what directory you are in. 
@@ -95,11 +97,6 @@ All of the following steps can be run exclusively in the RStudio terminal
 
 <b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws a warning.
 
-14. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-15. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-16. Test to see if your app works by running ```electron-forge start```
-17. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
-
 <b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running ```npm install```. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
 ```
  "repository": {
@@ -107,6 +104,11 @@ All of the following steps can be run exclusively in the RStudio terminal
   "url": "git://github.com/username/repo.git"
   },
 ```
+
+14. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+15. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
+16. Test to see if your app works by running ```electron-forge start```
+17. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
 ---
 
@@ -173,7 +175,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
             - In Cygwin, re-run ```sh ./get-r-win.sh``` 
 13. In the R console, ```install.packages("automagic")``` if this package is not already installed.
 14. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R by running ```Rscript add-cran-binary-pkgs.R```
-15. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
+15. Using R, edit package.json to add additional dependencies. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
     "dependencies": {
       "axios": "^0.19.2",
@@ -205,11 +207,6 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 
 <b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws a warning.
 
-16. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-17. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
-18. Test to see if your app works by running ```electron-forge start``` in the Cygwin or RStudio terminal
-19. If it runs, package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
-
 <b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running ```npm install```. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
 ```
  "repository": {
@@ -217,6 +214,14 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
   "url": "git://github.com/username/repo.git"
   },
 ```
+
+16. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+17. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder.
+18. Test to see if your app works by running ```electron-forge start``` in the Cygwin terminal.
+    - To stop running the app, press ```Ctrl+C```
+19. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+
+
 
 ---
 
