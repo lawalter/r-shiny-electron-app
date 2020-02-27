@@ -40,7 +40,7 @@ All of the following steps can be run exclusively in the RStudio terminal
     - Run ```pwd``` on the command line to check what directory you are in. 
     - If you're not in the right folder, change your directory using ```cd example/file/path``` with the example path replaced with the appropriate path to your project. 
 6. In your project directory, install Electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. 
-    - <b>Note:</b> Your app cannot be titled 'app'.
+    - <b>Note:</b> Your app cannot be titled "app".
 7. In your appNameHere folder, delete folder 'src'. 
 8. Move or add files (I typically use the R file pane gui) to your new app folder, including:
 - get-r-mac.sh 
@@ -93,7 +93,7 @@ All of the following steps can be run exclusively in the RStudio terminal
       "fs-extra": "^8.1.0"
       }
 ```
-<b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers. You can accomplish this by manually searching the module names on https://www.npmjs.com/
+<b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers. You can accomplish this by manually searching the module names at https://www.npmjs.com/
 
 <b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws a warning.
 
@@ -143,7 +143,8 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
     - If you're not in the right folder, change your directory using ```cd C:\Users\Name\Desktop\gitFolderName``` with the example path replaced with the appropriate path to your project. 
 9. In your project directory, install Electron locally:
     - Using Windows PowerShell, run ```npx create-electron-app appNameHere```
-    - Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
+    - Replace appNameHere with whatever you want to name your app. 
+        - <b>Note:</b> Your app cannot be titled "app".
 10. Move or add files (I typically use the R file pane gui) to your new app folder, including:
 - get-r-win.sh
 - add-cran-binary-pkgs.R
@@ -203,7 +204,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
       "fs-extra": "^8.1.0"
       }
 ```
-<b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on https://www.npmjs.com/
+<b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names at https://www.npmjs.com/
 
 <b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws a warning.
 
@@ -221,13 +222,12 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
     - To stop running the app, press ```Ctrl+C```
 19. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
-
-
 ---
 
 ## Troubleshooting 
 
-- To change your version of node (i.e. downgrade), install program 'n'. This program will let us downgrade node if there is an issue running it at the most up-to-date version. In the terminal, run ```sudo npm install -g n``` to install and then ```sudo n stable``` to upgrade to the latest version of n. For example, to change to node v10.16.3 run: ```sudo n 13.9.0```
+- To change your version of node, install program 'n'. This program will enable you downgrade or upgrade node if there is an issue running it at your current version. In the terminal, run ```sudo npm install -g n``` to install and then ```sudo n stable``` to upgrade to the latest version of n. 
+    - <b>Example:</b> To change to node v10.16.3 run ```sudo n 13.9.0```
 
 [Back to top](#how-to-make-an-r-shiny-electron-app)
 
