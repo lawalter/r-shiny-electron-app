@@ -15,7 +15,7 @@ A setup guide by L. Abigail Walter
 ### Navigation
 
 - [Setup guide: macOS](#getting-started-on-macos) - complete!
-- [Setup guide: Windows](#getting-started-on-windows) - in progress
+- [Setup guide: Windows](#getting-started-on-windows) - complete!
 - [Troubleshooting](#troubleshooting)
 
 ---
