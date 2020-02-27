@@ -1,5 +1,4 @@
 # Download and extract the Windows binary install
-# Requires innoextract installed in the Dockerfile
 mkdir r-win
 wget https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe \
 --output-document r-win/latest_r.exe
