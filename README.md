@@ -61,7 +61,7 @@ All of the following steps can be run exclusively in the RStudio terminal
     - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.6.2.pkg``` with the version you are running. 
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
     - Once you save the file, run the shell script in the terminal ```sh ./get-r-mac.sh``` 
-11. If you don't have the automagic package installed, run ```install.packages("automagic")``` R console. 
+11. If you don't have the automagic package installed, run ```install.packages("automagic")```  in the R console. 
 12. In the R terminal, run ```Rscript add-cran-binary-pkgs.R``` to get packages for R. 
 13. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
@@ -139,7 +139,9 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 8. Make sure your directory is in R project folder you're ready to turn into an app. 
     - In Windows PowerShell, run ```pwd``` on the command line to check what directory you are in. 
     - If you're not in the right folder, change your directory using ```cd C:\Users\Name\Desktop\gitFolderName``` with the example path replaced with the appropriate path to your project. 
-9. In your project directory, install Electron locally using Windows PowerShell by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
+9. In your project directory, install Electron locally:
+    - Using Windows PowerShell, run ```npx create-electron-app appNameHere```
+    - Replace appNameHere with whatever you want to name your app. <b>Note:</b> Your app cannot be titled 'app'.
 10. Move or add files (I typically use the R file pane gui) to your new app folder, including:
 - get-r-win.sh
 - add-cran-binary-pkgs.R
@@ -157,12 +159,13 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 11. In Windows PowerShell, change your directory to your new app folder ```cd appNameHere```
 12. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running if you made the app.R, or the version of R that was used to make the app.R.
+    - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running if you made the app.R, or the version of R that was used to make the app.
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
     - Open the Cygwin terminal. Change your directory by 1) typing ```cd```, 2) opening File Explorer and navigating to your app folder, then 3 ) dragging the app folder itself to the Cygwin terminal window to paste the file path. Run the command.
         - <b>Example:</b> ```cd /cygdrive/c/Users/Abby/Desktop/git/r-shiny-electron-app/appNameHere```
     - In Cygwin, run ```sh ./get-r-win.sh```
         - <b>If you got an error:</b> you will likely need to convert get-r-win.sh to Unix 
+        - To fix error ```./get-r-win.sh: line 5 --output-document: command not found```
             - Download <a href="https://notepad-plus-plus.org/">Notepad++</a> if you don't already have it
             - Open get-r-win.sh in Notepad++
             - Go to Edit -> EOL Conversion -> Unix (LF)
@@ -199,6 +202,8 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
       }
 ```
 <b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers by manually searching the module names on https://www.npmjs.com/
+
+<b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws a warning.
 
 16. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
 17. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
