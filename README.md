@@ -32,7 +32,7 @@ All of the following steps can be run exclusively in the RStudio terminal
 3. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
 4. Open an existing R project, create a new one, or initialize a project by cloning a git repo.
   
-## Advanced steps
+## Advanced macOS steps
   
 ### Start here if you have all of the dependencies installed:
 
@@ -134,7 +134,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 6. Check your versions of node ```node -v``` and npm ```npm -v``` using any terminal. For this guide, I will be running <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
 7. Open an existing R project, create a new one, or initialize a project by cloning a git repo.
   
-## Advanced steps
+## Advanced Windows steps
   
 ### Start here if you have all of the dependencies installed:
 
