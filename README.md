@@ -6,7 +6,7 @@ A setup guide by L. Abigail Walter
 
 ### Introduction
 
-<b>Motivation:</b> In February 2020, I was unable to create an app using an R Shiny Electron template via Dirk Shumaker's <a href="https://github.com/dirkschumacher/r-shiny-electron">original repo</a> or Travis Hinkelman's <a href="https://github.com/hinkelman/r-shiny-electron">fork</a>. I bypassed this issue of ```npm``` reporting dozens of warnings ond vulnerabilities by installing elecron locally with ```npx```.
+<b>Motivation:</b> In February 2020, I was unable to create an app using an R Shiny Electron template via Dirk Shumaker's <a href="https://github.com/dirkschumacher/r-shiny-electron">original repo</a> or Travis Hinkelman's <a href="https://github.com/hinkelman/r-shiny-electron">fork</a>. I bypassed this issue of <b>npm</b> reporting dozens of warnings ond vulnerabilities by installing elecron locally with <b>npx</b>.
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
@@ -16,6 +16,7 @@ A setup guide by L. Abigail Walter
 
 - [Setup guide: macOS](#getting-started-on-macos) - complete!
 - [Setup guide: Windows](#getting-started-on-windows) - complete!
+- [Setup guide: Linux](#getting-started-on-Linux) - in progress
 - [Troubleshooting](#troubleshooting)
 
 ---
@@ -224,10 +225,61 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 
 ---
 
-## Troubleshooting 
+## Getting started on Linux
+These steps were created for Linux Mint 18 (Sarah), all commands can be run in the R terminal (or your favorite terminal) unless otherwise specified
 
-- To change your version of node, install program 'n'. This program will enable you downgrade or upgrade node if there is an issue running it at your current version. In the terminal, run ```sudo npm install -g n``` to install and then ```sudo n stable``` to upgrade to the latest version of n. 
-    - <b>Example:</b> To change to node v10.16.3 run ```sudo n 13.9.0```
+### Steps to get your computer ready:
+
+1. Install Node.js using the terminal ```sudo apt install nodejs-legacy```
+2. Your Node.js version is probably behind, so next install a version manager ```sudo npm install -g n```
+    - Upgrade Node.js 
+        - To the most recent version, which at present is v13.9.0, by running ```sudo n 13.9.0```
+        - Or to the most recent stable version using ```sudo n stable```
+3. Install Electron Forge
+    - Run ```npm i -g @electron-forge/cli``` 
+    - If there's a permission error, run ```sudo npm i -g @electron-forge/cli```
+4. Check your versions of node ```node -v``` and npm ```npm -v```. For this guide, I will be using <b>node v13.9.0</b> and <b>npm v6.13.7</b>. If your installations do not match mine and you experience problems with these steps, try downgrading or upgrading (see [Troubleshooting](#troubleshooting) section below).
+5. Open an existing R project, create a new one, or initialize a project by cloning a git repo.
+  
+## Advanced Linux steps
+  
+### Start here if you have all of the dependencies installed:
+
+6. Make sure your directory is in R project folder you're ready to turn into an app. 
+    - Run ```pwd``` on the command line to check what directory you are in. 
+    - If you're not in the right folder, change your directory using ```cd example/file/path``` with the example path replaced with the appropriate path to your project. 
+7. In your project directory, install Electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. 
+    - <b>Note:</b> Your app cannot be titled "app".
+8. In your appNameHere folder, delete folder 'src'. 
+9. Move or add files (I typically use the R file pane gui) to your new app folder, including:
+- get-r-mac.sh 
+- add-cran-binary-pkgs.R
+- start-shiny.R
+- Make new folder <b>shiny</b> for: 
+    - shiny/app.R 
+- Make new folder <b>src</b> for:
+    - src/failed.html
+    - src/helpers.js
+    - src/index.css
+    - src/index.js
+    - src/loading.css
+    - src/loading.html
+    - src/main.js
+- <b>Note:</b> File app.R is whatever R Shiny script you want to launch in your application. You can use the example provided in this repo or use your own.
+10. Change your directory to your new app folder ```cd appNameHere```
+11. Install R locally:
+    - First, check the version of R on your machine. In the R console, run ```version``` 
+    - Edit get-r-linux.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.6.2.pkg``` with the version you are running. 
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
+    - Once you save the file, run the shell script in the terminal ```sh ./get-r-linux.sh``` 
+    
+---
+
+## Troubleshooting 
+Steps for macOS, Windows, and Linux
+
+- To change your version of Node.js, install <b>n</b> with npm. This module will enable you downgrade or upgrade Node.js if there is an issue running it at your current version. In the terminal, run ```sudo npm install -g n``` to install.
+    - <b>Example:</b> To change to Node v10.16.3 run ```sudo n 13.9.0```
 
 [Back to top](#how-to-make-an-r-shiny-electron-app)
 
