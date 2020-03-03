@@ -20,6 +20,6 @@ bin/R
 chmod +x bin/R
 rm -f bin/R.bak
 
-# Remove unneccessary files TODO: What else
+# Remove unneccessary files
 rm -r doc tests
 rm -r lib/*.dSYM
