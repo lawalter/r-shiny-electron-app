@@ -7,5 +7,5 @@ innoextract -e latest_r.exe
 mv app/* ../r-win
 rm -r app latest_r.exe 
 
-# Remove unneccessary files TODO: What else?
+# Remove unneccessary files 
 rm -r doc tests 
