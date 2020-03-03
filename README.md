@@ -268,9 +268,12 @@ These steps were created for Linux Mint 18 (Sarah), all commands can be run in t
 - <b>Note:</b> File app.R is whatever R Shiny script you want to launch in your application. You can use the example provided in this repo or use your own.
 10. Change your directory to your new app folder ```cd appNameHere```
 11. Install R locally:
-    - First, check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-linux.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.6.2.pkg``` with the version you are running. 
+    - First, check your Ubuntu release version ```cat /etc/os-release``` listed on the "UBUNTU_CODENAME=" line
+    - Check the version of R on your machine. In the R console, run ```version``` 
+    - Edit get-r-linux.sh url ```https://cloud.r-project.org/bin/linux/ubuntu/xenial-cran35/r-base_3.6.2.orig.tar.gz``` based on your release version, linking to the appropriate <a href="https://cloud.r-project.org/bin/linux/ubuntu/">R directory</a> *and* R version.
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
+        - <b>Example:</b> For my computer running Linux Mint Sarah 18 and R v3.6.2, my UBUNTU_CODENAME is xenial and the r-base .tar.gz file I need is 3.6.2.
+        - <b>Note:</b> I only cover installing R locally on Ubuntu and Ubuntu-based editions. To install R locally on another Linux distribution, cheeck out the <a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-R-under-Unix_002dalikes">R Installation and Administration Manual</a> and readme files in the <a href="https://cloud.r-project.org/bin/linux/ubuntu/">R directories</a>. Good luck!
     - Once you save the file, run the shell script in the terminal ```sh ./get-r-linux.sh``` 
     
 ---
