@@ -2,7 +2,6 @@
 set -e
 
 # Download and extract the main Mac Resources directory
-# Requires xar and cpio, both installed in the Dockerfile
 mkdir -p r-mac
 curl -o r-mac/latest_r.pkg \
 https://cloud.r-project.org/bin/macosx/R-3.6.2.pkg
