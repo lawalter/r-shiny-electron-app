@@ -42,14 +42,14 @@ All of the following steps can be run exclusively in the RStudio terminal
     - If you're not in the right folder, change your directory using ```cd example/file/path``` with the example path replaced with the appropriate path to your project. 
 6. In your project directory, install Electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. 
     - <b>Note:</b> Your app cannot be titled "app".
-7. In your appNameHere folder, delete folder 'src'. 
-8. Move or add files (I typically use the R file pane gui) to your new app folder, including:
+7. In your appNameHere folder, delete folder <b>src</b>. 
+8. Move files (I typically use the R file pane gui) to your new app folder, including:
 - get-r-mac.sh 
 - add-cran-binary-pkgs.R
 - start-shiny.R
-- Make new folder <b>shiny</b> for: 
+- Folder <b>shiny</b> from this repo, containing: 
     - shiny/app.R 
-- Make new folder <b>src</b> for:
+- Folder <b>src</b> from this repo, containing:
     - src/failed.html
     - src/helpers.js
     - src/index.css
@@ -146,13 +146,14 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
     - Using Windows PowerShell, run ```npx create-electron-app appNameHere```
     - Replace appNameHere with whatever you want to name your app. 
         - <b>Note:</b> Your app cannot be titled "app".
-10. Move or add files (I typically use the R file pane gui) to your new app folder, including:
+10. In your appNameHere folder, delete folder <b>src</b>. 
+11. Move files (I typically use the R file pane gui) to your new app folder, including:
 - get-r-win.sh
 - add-cran-binary-pkgs.R
 - start-shiny.R
-- Make new folder <b>shiny</b> for: 
+- Folder <b>shiny</b> from this repo, containing:  
     - shiny/app.R 
-- Delete auto-created contents of folder <b>src</b>, and replace with:
+- Folder <b>src</b> from this repo, containing:
     - src/failed.html
     - src/helpers.js
     - src/index.css
@@ -160,8 +161,8 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
     - src/loading.css
     - src/loading.html
     - src/main.js
-11. In Windows PowerShell, change your directory to your new app folder ```cd appNameHere```
-12. Install R locally:
+12. In Windows PowerShell, change your directory to your new app folder ```cd appNameHere```
+13. Install R locally:
     - First, check the version of R on your machine. In the R console, run ```version``` 
     - Edit get-r-win.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe``` with the version you are running if you made the app.R, or the version of R that was used to make the app.
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
@@ -175,9 +176,9 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
             - Go to Edit -> EOL Conversion -> Unix (LF)
             - Save the script
             - In Cygwin, re-run ```sh ./get-r-win.sh``` 
-13. In the R console, ```install.packages("automagic")``` if this package is not already installed.
-14. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R by running ```Rscript add-cran-binary-pkgs.R```
-15. Using R, edit package.json to add additional dependencies. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
+14. In the R console, ```install.packages("automagic")``` if this package is not already installed.
+15. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R by running ```Rscript add-cran-binary-pkgs.R```
+16. Using R, edit package.json to add additional dependencies. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
     "dependencies": {
       "axios": "^0.19.2",
@@ -217,11 +218,11 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
   },
 ```
 
-16. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-17. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder.
-18. Test to see if your app works by running ```electron-forge start``` in the Cygwin terminal.
+17. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+18. In Cygwin, run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder.
+19. Test to see if your app works by running ```electron-forge start``` in the Cygwin terminal.
     - To stop running the app, press ```Ctrl+C```
-19. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+20. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
 ---
 
@@ -250,14 +251,14 @@ These steps were created for Linux Mint 18 (Sarah), all commands can be run in t
     - If you're not in the right folder, change your directory using ```cd example/file/path``` with the example path replaced with the appropriate path to your project. 
 7. In your project directory, install Electron locally by running ```npx create-electron-app appNameHere```. Replace appNameHere with whatever you want to name your app. 
     - <b>Note:</b> Your app cannot be titled "app".
-8. In your appNameHere folder, delete folder 'src'. 
-9. Move or add files (I typically use the R file pane gui) to your new app folder, including:
-- get-r-mac.sh 
+8. In your appNameHere folder, delete folder <b>src</b>. 
+9. Move files (I typically use the R file pane gui) to your new app folder, including:
+- get-r-linux.sh 
 - add-cran-binary-pkgs.R
 - start-shiny.R
-- Make new folder <b>shiny</b> for: 
+- Folder <b>shiny</b> from this repo, containing:  
     - shiny/app.R 
-- Make new folder <b>src</b> for:
+- Folder <b>src</b> from this repo, containing:
     - src/failed.html
     - src/helpers.js
     - src/index.css
@@ -270,9 +271,10 @@ These steps were created for Linux Mint 18 (Sarah), all commands can be run in t
 11. Install R locally:
     - First, check your Ubuntu release version ```cat /etc/os-release``` listed on the "UBUNTU_CODENAME=" line
     - Check the version of R on your machine. In the R console, run ```version``` 
-    - Edit get-r-linux.sh url ```https://cloud.r-project.org/bin/linux/ubuntu/xenial-cran35/r-base_3.6.2.orig.tar.gz``` based on your release version, linking to the appropriate <a href="https://cloud.r-project.org/bin/linux/ubuntu/">R directory</a> *and* R version.
-        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
+    - Install yum ```sudo apt-get install -y yum-utils```
+    - Edit the URL in get-r-linux.sh ```https://cloud.r-project.org/bin/linux/ubuntu/xenial-cran35/r-base_3.6.2.orig.tar.gz``` based on your release version, linking to the appropriate <a href="https://cloud.r-project.org/bin/linux/ubuntu/">R directory</a> *and* R version.
         - <b>Example:</b> For my computer running Linux Mint Sarah 18 and R v3.6.2, my UBUNTU_CODENAME is xenial and the r-base .tar.gz file I need is 3.6.2.
+        - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
         - <b>Note:</b> I only cover installing R locally on Ubuntu and Ubuntu-based editions. To install R locally on another Linux distribution, cheeck out the <a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-R-under-Unix_002dalikes">R Installation and Administration Manual</a> and readme files in the <a href="https://cloud.r-project.org/bin/linux/ubuntu/">R directories</a>. Good luck!
     - Once you save the file, run the shell script in the terminal ```sh ./get-r-linux.sh``` 
     
