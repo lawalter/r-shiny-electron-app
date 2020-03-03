@@ -10,7 +10,7 @@ A setup guide by L. Abigail Walter
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
-<b>Note:</b> Building the app on a Mac is _much_ simpler than Windows. 
+<b>Note:</b> Building the app using macOS or Ubuntu is _much_ simpler than Windows. 
 
 ### Navigation
 
@@ -64,7 +64,7 @@ All of the following steps can be run exclusively in the RStudio terminal
     - Edit get-r-mac.sh, replacing version numbers in the link ```https://cloud.r-project.org/bin/macosx/R-3.6.2.pkg``` with the version you are running. 
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
     - Once you save the file, run the shell script in the terminal ```sh ./get-r-mac.sh``` 
-11. If you don't have the automagic package installed, run ```install.packages("automagic")```  in the R console. 
+11. If you don't have the automagic package installed, run ```install.packages("automagic")``` in the R console. 
 12. In the R terminal, run ```Rscript add-cran-binary-pkgs.R``` to get packages for R. 
 13. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
 ```      
@@ -107,7 +107,7 @@ All of the following steps can be run exclusively in the RStudio terminal
 ```
 
 14. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
-15. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder
+15. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder.
 16. Test to see if your app works by running ```electron-forge start```
 17. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
@@ -227,7 +227,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 ---
 
 ## Getting started on Linux
-These steps were created for Linux Mint 18 (Sarah), all commands can be run in the R terminal (or your favorite terminal) unless otherwise specified
+These steps were created on and for Linux Mint 18, but should work with any Ubuntu edition
 
 ### Steps to get your computer ready:
 
@@ -253,7 +253,7 @@ These steps were created for Linux Mint 18 (Sarah), all commands can be run in t
     - <b>Note:</b> Your app cannot be titled "app".
 8. In your appNameHere folder, delete folder <b>src</b>. 
 9. Move files (I typically use the R file pane gui) to your new app folder, including:
-- get-r-linux.sh 
+- get-r-linux.sh -- shell script adapted from <a href="https://docs.rstudio.com/resources/install-r-source/">RStudio Documentation</a> by me
 - add-cran-binary-pkgs.R
 - start-shiny.R
 - Folder <b>shiny</b> from this repo, containing:  
@@ -269,15 +269,59 @@ These steps were created for Linux Mint 18 (Sarah), all commands can be run in t
 - <b>Note:</b> File app.R is whatever R Shiny script you want to launch in your application. You can use the example provided in this repo or use your own.
 10. Change your directory to your new app folder ```cd appNameHere```
 11. Install R locally:
-    - First, check your Ubuntu release version ```cat /etc/os-release``` listed on the "UBUNTU_CODENAME=" line
-    - Check the version of R on your machine. In the R console, run ```version``` 
-    - Install yum ```sudo apt-get install -y yum-utils```
-    - Edit the URL in get-r-linux.sh ```https://cloud.r-project.org/bin/linux/ubuntu/xenial-cran35/r-base_3.6.2.orig.tar.gz``` based on your release version, linking to the appropriate <a href="https://cloud.r-project.org/bin/linux/ubuntu/">R directory</a> *and* R version.
-        - <b>Example:</b> For my computer running Linux Mint Sarah 18 and R v3.6.2, my UBUNTU_CODENAME is xenial and the r-base .tar.gz file I need is 3.6.2.
+    - First, check the version of R on your machine. In the R console, run ```version``` 
+    - Open get-r-linux.sh and edit the line ```export R_VERSION=3.6.2``` with the version you are running if you made the app.R, or the version of R that was used to make the app.
         - <b>Important:</b> The R version used to make the shiny app and the version installed locally must match. The app included in this repo was created in R v3.6.2.
         - <b>Note:</b> I only cover installing R locally on Ubuntu and Ubuntu-based editions. To install R locally on another Linux distribution, cheeck out the <a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-R-under-Unix_002dalikes">R Installation and Administration Manual</a> and readme files in the <a href="https://cloud.r-project.org/bin/linux/ubuntu/">R directories</a>. Good luck!
-    - Once you save the file, run the shell script in the terminal ```sh ./get-r-linux.sh``` 
-    
+    - Save your edit(s) in get-r-linux.sh and then run the shell script in the terminal ```sh ./get-r-linux.sh``` 
+        - <b>Note:</b> This step may take a while (5-15 mins).
+12. If you don't have the automagic package installed, run ```install.packages("automagic")``` in the R console. 
+13. In the R terminal, run ```Rscript add-cran-binary-pkgs.R``` to get packages for R. 
+14. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket ```}``` of the .json file.
+```      
+    "dependencies": {
+      "axios": "^0.19.2",
+      "electron-squirrel-startup": "^1.0.0",
+      "esm": "^3.2.25",
+      "execa": "^4.0.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.8.4",
+      "@babel/plugin-transform-async-to-generator": "^7.8.3",
+      "@babel/preset-env": "^7.8.4",
+      "@babel/preset-react": "^7.8.3",
+      "@electron-forge/cli": "^6.0.0-beta.50",
+      "@electron-forge/maker-deb": "^6.0.0-beta.50",
+      "@electron-forge/maker-rpm": "^6.0.0-beta.50",
+      "@electron-forge/maker-squirrel": "^6.0.0-beta.50",
+      "@electron-forge/maker-zip": "^6.0.0-beta.50",
+      "electron": "8.0.2",
+      "eslint": "^6.8.0",
+      "eslint-config-airbnb": "^18.0.1",
+      "eslint-plugin-import": "^2.20.1",
+      "eslint-plugin-jsx-a11y": "^6.2.3",
+      "eslint-plugin-react": "^7.18.3",
+      "eslint-plugin-react-hooks": "^1.7.0",
+      "fs-extra": "^8.1.0"
+      }
+```
+<b>Note:</b> Modules are updated frequently and as such are subject to changing version numbers. It is important to double-check that these dependencies are up-to-date by replacing their version numbers with any newer version numbers. You can accomplish this by manually searching the module names at https://www.npmjs.com/
+
+<b>Note:</b> We are using ```"eslint-plugin-react-hooks": "^1.7.0"``` because using the latest v2.4.0 throws a warning.
+
+<b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running ```npm install```. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
+```
+ "repository": {
+  "type": "git",
+  "url": "git://github.com/username/repo.git"
+  },
+```
+
+15. Replace the ```"lint": "echo \"No linting configured\""``` line in package.json with ```"lint": "eslint src --color"```
+16. Run ```npm install``` to add new dependencies you listed in package.json to the node_modules folder.
+17. Test to see if your app works by running ```electron-forge start```
+18. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
+
 ---
 
 ## Troubleshooting 
