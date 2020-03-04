@@ -3,7 +3,6 @@
 # An example R Shiny script 
 # This app generates random bird band color combinations
 
-# License:   MIT 
 # Copyright (c) 2020 L. Abigail Walter
 
 # libraries ---------------------------------------------------------------
