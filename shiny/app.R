@@ -1,7 +1,7 @@
+# Copyright (c) 2020 L. Abigail Walter
+
 # An example R Shiny script 
 # This app generates random bird band color combinations
-
-# Copyright (c) 2020 L. Abigail Walter
 
 # libraries ---------------------------------------------------------------
 
