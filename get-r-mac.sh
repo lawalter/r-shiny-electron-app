@@ -1,3 +1,5 @@
+# Copyright (c) 2018 Dirk Schumacher, Noam Ross, Rich FitzJohn
+
 #!/usr/bin/env bash
 set -e
 
