@@ -1,3 +1,5 @@
+# Copyright (c) 2018 Dirk Schumacher, Noam Ross, Rich FitzJohn
+
 # Download and extract the Windows binary install
 mkdir r-win
 wget https://cloud.r-project.org/bin/windows/base/R-3.6.2-win.exe \
