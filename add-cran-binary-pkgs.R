@@ -1,3 +1,5 @@
+# Copyright (c) 2018 Dirk Schumacher, Noam Ross, Rich FitzJohn
+
 #!/usr/bin/env Rscript
 
 # Script to find dependencies of a pkg list, download binaries and put them
