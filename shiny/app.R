@@ -3,9 +3,9 @@
 # An example R Shiny script 
 
 # Purpose:   To generate random bird band color combinations
-# Author:    L. Abigail Walter
-# Github:    @lawalter
-# Last edit: Feb 2020
+# Author:    L.A. Walter
+# Github:    github.com/lawalter
+# Last edit: Mar 2020
 
 # libraries ---------------------------------------------------------------
 
@@ -41,14 +41,7 @@ ui <- fluidPage(
                                         "[W] White" = "W",
                                         "[K] Black" = "K", 
                                         "[E] Grey" = "E"),
-                         selected = c("X", "R", "O", "Y", "G", "B", "W")),
-      
-      # numericInput("nBands",
-      #              "Number of bands:",
-      #              min = 1,
-      #              max = 6,
-      #              step = 1,
-      #              value = 4)
+                         selected = c("X", "R", "O", "Y", "G", "B", "W"))
     ),
 
     # Show a plot of the generated distribution:
