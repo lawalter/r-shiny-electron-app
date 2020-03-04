@@ -1,5 +1,3 @@
-# intro -------------------------------------------------------------------
-
 # An example R Shiny script 
 # This app generates random bird band color combinations
 
