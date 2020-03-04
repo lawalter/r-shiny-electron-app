@@ -6,7 +6,7 @@ A setup guide by L. Abigail Walter
 
 ### Introduction
 
-<b>Motivation:</b> In February 2020, I was unable to create a standalone desktop app using an R Shiny Electron template via Dirk Shumaker's <a href="https://github.com/dirkschumacher/r-shiny-electron">original repo</a> or Travis Hinkelman's <a href="https://github.com/hinkelman/r-shiny-electron">fork</a>. I avoided the warnings created with their methods by using npx instead of npm, and by adding file main.js, and wanted to share this information with other users.
+<b>Motivation:</b> In February 2020, I was unable to create a standalone desktop app using an R Shiny Electron template via Dirk Shumaker's <a href="https://github.com/dirkschumacher/r-shiny-electron">original repo</a> or Travis Hinkelman's <a href="https://github.com/hinkelman/r-shiny-electron">fork</a>. I avoided the warnings created with their methods by using npx instead of npm, and by adding file index.js that redirects to main.js, and wanted to share this information with other users.
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
