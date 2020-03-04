@@ -21,7 +21,7 @@ A setup guide by L. Abigail Walter
 - [Setup guide: Linux](#getting-started-on-linux) - in progress
 - [Troubleshooting](#troubleshooting)
 
-<b>Coming soon:</b> <a href="https://github.com/lawalter/r-shiny-electron-mobile">Android and iOS mobile apps using R Shiny Electron</a> 
+<b>Coming soon:</b> <a href="https://github.com/lawalter/r-shiny-electron-mobile">Android and iOS mobile app setup using R Shiny Electron</a> 
 
 ---
 
