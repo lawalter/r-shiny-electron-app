@@ -1,3 +1,5 @@
+// Copyright (c) 2018 Dirk Schumacher, Noam Ross, Rich FitzJohn
+
 const randomInt = (min, max) => {
   return Math.round(Math.random() * ((max + 1) - min) + min)
 }
