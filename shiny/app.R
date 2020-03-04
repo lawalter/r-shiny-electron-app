@@ -1,11 +1,10 @@
 # intro -------------------------------------------------------------------
 
 # An example R Shiny script 
+# This app generates random bird band color combinations
 
-# Purpose:   To generate random bird band color combinations
-# Author:    L.A. Walter
-# Github:    github.com/lawalter
-# Last edit: Mar 2020
+# License:   MIT 
+# Copyright (c) 2020 L. Abigail Walter
 
 # libraries ---------------------------------------------------------------
 
