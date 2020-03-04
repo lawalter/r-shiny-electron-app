@@ -10,6 +10,8 @@ A setup guide by L. Abigail Walter
 
 <b>Objective:</b> Write a comprehensive guide for anyone interested in creating an R Shiny Electron app. This guide assumes the user has intermediate R coding skills, intermediate ability to use the terminal, and little to no experience with JavaScript. 
 
+<b>Acknowledgements:</b> I credit <a href="https://github.com/dirkschumacher/r-shiny-electron">Dirk Shumacher</a> for writing most scripts in this repo, only some of which I edited with only minor changes. In addition, <a href="https://www.travishinkelman.com/post/deploy-shiny-electron/">Travis Hinkelman</a> created the groundwork for this guide, which I made changes to in order to avoid warnings and reports of vulnerabilities and to ultimately allow the app to launch.
+
 <b>Note:</b> I recommend building your app using macOS if possible; it is _much_ simpler than Windows. 
 
 ### Navigation
@@ -18,7 +20,8 @@ A setup guide by L. Abigail Walter
 - [Setup guide: Windows](#getting-started-on-windows) - complete!
 - [Setup guide: Linux](#getting-started-on-linux) - in progress
 - [Troubleshooting](#troubleshooting)
-- [Acknowledgements](#acknowledgements)
+
+<b>Coming soon:</b> <a href="https://github.com/lawalter/r-shiny-electron-mobile">Android and iOS mobile apps using R Shiny Electron</a> 
 
 ---
 
@@ -323,15 +326,13 @@ These steps were created on and for Linux Mint 18, but should work with any Ubun
 17. Test to see if your app works by running ```electron-forge start```
 18. If the app runs successfully, congratulations! Package and create the .exe on the command line with ```electron-forge make```. Your app can be found in the /out folder.
 
+---
+
 ## Troubleshooting 
 Steps for macOS, Windows, and Linux
 
 - To change your version of Node.js, install <b>n</b> with npm. This module will enable you downgrade or upgrade Node.js if there is an issue running it at your current version. In the terminal, run ```sudo npm install -g n``` to install.
     - <b>Example:</b> To change to Node v10.16.3 run ```sudo n 13.9.0```
-
-## Acknowledgements
-
-I credit <a href="https://github.com/dirkschumacher/r-shiny-electron">Dirk Shumacher</a> for writing most scripts in this repo, only some of which I edited with only minor changes. In addition, <a href="https://www.travishinkelman.com/post/deploy-shiny-electron/">Travis Hinkelman</a> created the groundwork for this guide, which I made changes to in order to avoid warnings and reports of vulnerabilities and to ultimately allow the app to launch.
 
 [Back to top](#how-to-make-an-r-shiny-electron-app)
 
