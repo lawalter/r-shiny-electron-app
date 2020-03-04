@@ -1,3 +1,5 @@
+// Copyright (c) 2018 Dirk Schumacher, Noam Ross, Rich FitzJohn
+
 import { app, session, BrowserWindow } from 'electron'
 
 import path from 'path'
