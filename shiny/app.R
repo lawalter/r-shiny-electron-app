@@ -53,40 +53,23 @@ ui <- fluidPage(
 # Define color combo function:
 
 get_colors <-
-  function(
-    colorVector,                # A vector of available color bands, coded
-    nBands = 4,                 # The number of bands
-    nPositions = nBands,        # The number of possible band positions
-    xPositions = 1:nPositions,  # The position of the X band, from LT to RB
-    nLeft = nPositions/2,       # The maximum number of bands on the left leg
-    nRight = nPositions/2       # The maximum number of bands on the right leg
-  ) {
-    map_dfc(
-      1:(nPositions/2),
-      function(x) {
-        x = colorVector
-      }) %>%
-      expand(!!! rlang::syms(names(.))) %>%
-      # Unite upper and lower bands:
-      unite('color', sep = '') %>%
+  function(x) {
+    as_tibble(x) %>%
+      transmute(color = value) %>%
       # All potential combos of left and right legs:
-      expand(
-        left = color,
-        right = color) %>%
-        {if(!is.null(nLeft)) {
-          filter(., (str_count(left, '[A-Z]') == nLeft))
-        } else .} %>%
-        {if(!is.null(nRight)) {
-          filter(., (str_count(left, '[A-Z]') == nRight))
-        } else .} %>%
-      # Unite as a single expression:
+      expand(left = color,
+             right = color) %>%
       unite('color', sep = '') %>%
-      # Correct number of bands:
-      filter(str_count(color, '[A-Z]') == nBands) %>%
-      {if("X" %in% colorVector){
+      expand(left = color,
+             right = color) %>%
+      # Unite as a single column:
+      unite('color', sep = '') %>%
+      # Filter for correct number of bands:
+      filter(str_count(color, '[A-Z]') == 4) %>%
+      {if("X" %in% x){
         filter(
           .,
-          # Combos with one, and only one, aluminum:
+          # Keep combos with one, and only one, aluminum:
           str_count(.$color, 'X') == 1)
       } else .} %>%
       # Randomize output:
