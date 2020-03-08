@@ -70,7 +70,7 @@ All of the following steps can be run exclusively in the RStudio terminal
 11. If you don't have the automagic package installed, run `install.packages("automagic")` in the R console. 
 12. In the R terminal, run `Rscript add-cran-binary-pkgs.R` to get packages for R. 
 13. Add additional dependencies to package.json. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket `}` of the .json file.
-```      
+```js      
     "dependencies": {
       "axios": "^0.19.2",
       "electron-squirrel-startup": "^1.0.0",
@@ -102,7 +102,7 @@ All of the following steps can be run exclusively in the RStudio terminal
 <b>Note:</b> We are using `"eslint-plugin-react-hooks": "^1.7.0"` because using the latest v2.4.0 throws a warning.
 
 <b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running `npm install`. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
-```
+```js
  "repository": {
   "type": "git",
   "url": "git://github.com/username/repo.git"
@@ -182,7 +182,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 14. In the R console, `install.packages("automagic")` if this package is not already installed.
 15. Switch to the RStudio terminal and make sure your directory is in the appNameHere folder. Get packages for R by running ```Rscript add-cran-binary-pkgs.R```
 16. Using R, edit package.json to add additional dependencies. Replace the dependencies listed at the end of the script with the following. Take care not to paste over the final ending bracket `}` of the .json file.
-```      
+```js      
     "dependencies": {
       "axios": "^0.19.2",
       "electron-squirrel-startup": "^1.0.0",
@@ -214,7 +214,7 @@ Unlike the macOS setup, Windows will require the use of multiple terminals, whic
 <b>Note:</b> We are using `"eslint-plugin-react-hooks": "^1.7.0"` because using the latest v2.4.0 throws a warning.
 
 <b>Optional</b>: If you have not added a field in the package.json for repository information, you will see a warning when running `npm install`. This is not a serious warning, but it is good practice to edit the .json with your git repo if you have the time. To do this, insert the following to your package.json:
-```
+```js
  "repository": {
   "type": "git",
   "url": "git://github.com/username/repo.git"
