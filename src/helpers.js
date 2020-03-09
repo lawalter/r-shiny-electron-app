@@ -27,6 +27,8 @@ export const getRPath = (platform) => {
     return 'r-win'
   } else if (platform === 'darwin') {
     return 'r-mac'
+  } else if (platform === 'linux') {
+    return 'r-linux'
   } else {
     throw new Error('OS not supported')
   }
