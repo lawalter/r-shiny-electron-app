@@ -20,7 +20,6 @@ A setup guide by L. Abigail Walter
 - [Setup guide: Windows](#getting-started-on-windows) - complete!
 - [Setup guide: Linux](#getting-started-on-linux) - in progress
 - [Troubleshooting](#troubleshooting)
-- <b>Coming soon:</b> <a href="https://github.com/lawalter/r-shiny-electron-mobile">How to make Android and iOS mobile apps using R Shiny Electron</a> 
 
 ---
 
